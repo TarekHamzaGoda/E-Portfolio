@@ -4,7 +4,7 @@ This e-portfolio contains elements collected throughout the **MSc of Computer Sc
 
 
 Link to the github page:
-	https://tarekhamzagoda.github.io/eportfolio/
+	https://tarekhamzagoda.github.io/https://tarekhamzagoda.github.io/E-Portfolio//
 	
 	
 *Thank You*

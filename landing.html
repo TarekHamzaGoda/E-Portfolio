@@ -86,44 +86,59 @@
 									<p><i>priority above is organized based on my personal opinion.</i></p>
 									<p>architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
 									
-									<h3>Article Review <i>Di Silvestro & Nadir (2021)</i> </h3>
+									<h3>Article Review:<i>Di Silvestro & Nadir (2021)</i> </h3>
 									<p>In an effort to enhance student learning experience and engagement in higher education, the article explores the benefits of student e-portfolios. This research was made to address the lack of publications encouraging the use of such platforms and its potential benefits. There are many aspects that one can benefit from putting together an e-portfolio. One surprising fact about the conducted research is that students were able to develop professional confidence over time. Personally, I have always thought that e-portfolios are mainly a place to showcase knowledge. However, having experienced building an e-portfolio myself, I can always go through previous tasks to revise my inputs on several subjects. I have found that this process helps in reaffirming gained knowledge throughout my learning process. As a result, students tend to gain confidence by re-observing their progress throughout education. </p>	
 									<h3>Protected and unprotected Variables</h3>
 									<p>Data member in a class can be public, private or protected. Such variables use the symbol (_) underscore to determine the access type of the data member. In The following example, a class called BankAcount will be created. Within, a public, protected and private variables will be included. The following exercise aims to test the accessibility of each variable. </p>
 									<pre><code>
-										class BankAccount():
-										""" A class to hold account information"""
+class BankAccount():
+""" A class to hold account information"""
 									
-										def __init__(self, account_num, account_name, account_balance):
-											self.account_num = account_num  # Public
-											self._account_name = account_name  # Protected
-											self._account_balance = account_balance  # Private
-									
-									
-									# Creating Objects
-									Customer_1 = BankAccount("AE41221", "John", 90223)
-									accn = Customer_1.account_num
-									accname = Customer_1._account_name
-									accb = Customer_1.__account_balance
+	def __init__(self, account_num, account_name, account_balance):
+	self.account_num = account_num  # Public
+	self._account_name = account_name  # Protected
+	self._account_balance = account_balance  # Private
 									
 									
-									print(accn)
-									print(accname)
-									print(accb) # Error				
+# Creating Objects
+Customer_1 = BankAccount("AE41221", "John", 90223)
+accn = Customer_1.account_num
+accname = Customer_1._account_name
+accb = Customer_1.__account_balance
+									
+									
+print(accn)
+print(accname)
+print(accb) # Error				
 									</code></pre>
 									<p><b>Results</b></p>
 									<pre><code>
-										AE41221
-										John
-										AttributeError: 'BankAccount' object has no attribute '__account_balance'
-										</Code></pre>
+AE41221
+John
+AttributeError: 'BankAccount' object has no attribute '__account_balance'
+									</Code></pre>
 									<p>Public variables can be accessed from outside the class while accessing private classes will result in an error. However, Private Variables can still be accessed by a member function of the class. </p>
 									<header class="major">
 										<h2>Unit 2</h2>
 									</header>
-										<h3>Reflections & Terminologies </h3>
-										<p>Unit 2 further elaborates on software design and explains the importance of the Use case diagrams. I personally think that use case diagrams are an integral factor of understanding real-world actors and main system features. I have concluded that use case diagrams are considered to illustrate user behaviours and summarizes the relationship between actors and systems (Paradigm 2022). An instance of use case diagrams is provided below: </p>
-									
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 2 further elaborates on software design and explains the importance of the Use case diagrams. I personally think that use case diagrams are an integral factor of understanding real-world actors and main system features. I have concluded that use case diagrams are considered to illustrate user behaviours and summarizes the relationship between actors and systems (Paradigm 2022). An instance of use case diagrams is provided below: </p>
+									<h3>UML models, Software Development Life Cycle</h3>
+									<p>Unified modelling language or UML is a modelling technique the illustrates a detailed development process of a system (Jacobson et al. 2004). In other words, UML is a general-purposed language that tends to support a step-by-step process to achieve a practical system. UML practices is considered a good development process and is crucial to the success of a software. Therefore, there are several types of UML models thar are used in different stages of the development process.</p>
+									<ol>
+									<li>User Requirements Stage: Use Case Diagram, Activity Diagrams, Deployment Diagram</li>
+									<li>System Implementation Stage: Class Diagram, State Machine Diagram </li>	
+									<li>Development Stage: Use Case Diagram, Sequence Diagram, State Machine Diagram  </li>
+									<li>Validation and Testing Stage: State Transition Diagram</li>
+									<li>Packaging and publishing Stage: Activity Diagram.</li>
+									</ol>
+									<p><i>Figure 3-7 Reference from "The Unified Modelling Language Reference Manual Second Edition"</i></p>
+									<p><b>State Machine Diagram Model of a Washing Machine. </b></p>
+									<p>Software architecture is an organizational structure of many systems that are connected and share interaction mechanisms.
+										Implementations are often guided by UML that informs the system design 
+									</p>
+
+							
 								</div>
 							</section>
 

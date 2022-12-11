@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>OOP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Home</strong> <span>Test</span></a>
+						<a href="index.html" class="logo"><strong>Home</strong>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -48,11 +48,11 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Reflection</h1>
+								<h1>Reflections, Artefacts & Documentation</h1>
 							</header>
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
+								<p>Welcome to my Object Object-Orientated module ePortfolio.<br />
+								Below you will find  reflections, assignments and information gathered from all units.</p>
 							</div>
 						</div>
 					</section>
@@ -66,27 +66,59 @@
 									<header class="major">
 										<h2>Unit 1</h2>
 									</header>
-										<h3>Forum Discussion</h3>
-										<p>One important aspect of Object-Orientated Programming is code reusability. Over the years, software engineers were able to advance in OOP practices across all industries by leveraging existent codes. OOM or object-oriented metrics aims to measure the reusability of software codes and data organization that can assist with efficient OOP development. In an article by Padhy et al (2018), researchers have established several properties in which code quality is measured. 
-									</p>
-									<li>1.“Architecture driven approach (ADP)”</li>
-									<li>2.“An Algorithm used in the program (AP)”</li>
-									<li>3.“Modules in the program (MIP)”</li>
-									<li>4.“Requirement Analysis (RA)”</li>
-									<li>5.“Design Patterns (DP)”</li>	
-									<li>6.“Documentation in project (DIP)”</li>	
-									<li>7.“Test Cases/Test Design (TCTD)”</li>	
-									<li>8.“Used in the data project (UD)”</li>	
-									<li>9.“Models in the project (MP)”</li>	
-									<li>10.“Knowledge requirement (KR)”</li>	
-									<li>11.“Service contracts (SC)”</li>	
-									<p>List priority above is organized based on a personal opinion.
-										Software architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 1 introduces UML Design & Object-oriented programming in python. My objective for this unit is to understand the main syntax, create classes, class method & Attributes. </p>
+									<h3>Forum Discussion</h3>
+									<p>One important aspect of Object-Orientated Programming is code reusability. Over the years, software engineers were able to advance in OOP practices across all industries by leveraging existent codes. OOM or object-oriented metrics aims to measure the reusability of software codes and data organization that can assist with efficient OOP development. In an article by Padhy et al (2018), researchers have established several properties in which code quality is measured.</p>
+									<ol>
+									<li>“Architecture driven approach (ADP)”</li>
+									<li>“An Algorithm used in the program (AP)”</li>
+									<li>“Modules in the program (MIP)”</li>
+									<li>“Requirement Analysis (RA)”</li>
+									<li>“Design Patterns (DP)”</li>	
+									<li>“Documentation in project (DIP)”</li>	
+									<li>“Test Cases/Test Design (TCTD)”</li>	
+									<li>“Used in the data project (UD)”</li>	
+									<li>“Models in the project (MP)”</li>	
+									<li>“Knowledge requirement (KR)”</li>	
+									<li>“Service contracts (SC)”</li>
+									</ol>	
+									<p><i>priority above is organized based on my personal opinion.</i></p>
+									<p>architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
+									
 									<h3>Article Review <i>Di Silvestro & Nadir (2021)</i> </h3>
 									<p>In an effort to enhance student learning experience and engagement in higher education, the article explores the benefits of student e-portfolios. This research was made to address the lack of publications encouraging the use of such platforms and its potential benefits. There are many aspects that one can benefit from putting together an e-portfolio. One surprising fact about the conducted research is that students were able to develop professional confidence over time. Personally, I have always thought that e-portfolios are mainly a place to showcase knowledge. However, having experienced building an e-portfolio myself, I can always go through previous tasks to revise my inputs on several subjects. I have found that this process helps in reaffirming gained knowledge throughout my learning process. As a result, students tend to gain confidence by re-observing their progress throughout education. </p>	
 									<h3>Protected and unprotected Variables</h3>
 									<p>Data member in a class can be public, private or protected. Such variables use the symbol (_) underscore to determine the access type of the data member. In The following example, a class called BankAcount will be created. Within, a public, protected and private variables will be included. The following exercise aims to test the accessibility of each variable. </p>
+									<code>class BankAccount():
+										""" A class to hold account information"""
+									
+										def __init__(self, account_num, account_name, account_balance):
+											self.account_num = account_num  # Public
+											self._account_name = account_name  # Protected
+											self._account_balance = account_balance  # Private
+									
+									
+									# Creating Objects
+									Customer_1 = BankAccount("AE41221", "John", 90223)
+									accn = Customer_1.account_num
+									accname = Customer_1._account_name
+									accb = Customer_1.__account_balance
+									
+									
+									print(accn)
+									print(accname)
+									print(accb) # Error
+									</code>
+									<p><b>Results</b></p>
+									<Code>AE41221
+										John
+										AttributeError: 'BankAccount' object has no attribute '__account_balance'
+										</Code>
 									<p>Public variables can be accessed from outside the class while accessing private classes will result in an error. However, Private Variables can still be accessed by a member function of the class. </p>
+									<header class="major">
+										<h2>Unit 2</h2>
+									</header>
 								</div>
 							</section>
 

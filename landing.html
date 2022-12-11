@@ -121,7 +121,7 @@ John
 AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									</Code></pre>
 									<p>Public variables can be accessed from outside the class while accessing private classes will result in an error. However, Private Variables can still be accessed by a member function of the class. </p>
-									P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 									<header class="major">
 										<h2>Unit 2</h2>
@@ -130,6 +130,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<p>Unit 2 further elaborates on software design and explains the importance of the Use case diagrams. I personally think that use case diagrams are an integral factor of understanding real-world actors and main system features. I have concluded that use case diagrams are considered to illustrate user behaviours and summarizes the relationship between actors and systems (Paradigm 2022).</p>
 									<p> An instance of use case diagrams (Self-Driving Car) is provided below: </p>
 									<span class="image main"><img src="images/USECASE_U2.png" alt="" /></span>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
 							
 									<hr />
 									<header class="major">
@@ -137,6 +138,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>Unit 3 provides a deeper understanding of different types of UML diagrams. In my opinion a class diagram is the most vital of them all. That is because the diagram presents a link between main system features and actual implementation techniques. Class diagrams provides a preview of the main classes, class variables and class objects. Classes represent main system features and its range of relationships with each other. Other UML diagrams such as sequence, activity, and state diagrams represent different stages of the software design. I think unit 3 provides an overview of all system design tools and stages.  </p>
+									<h3><u>Artefacts</u></h3>
 									<h3>UML models, Software Development Life Cycle</h3>
 									<p>Unified modelling language or UML is a modelling technique the illustrates a detailed development process of a system (Jacobson et al. 2004). In other words, UML is a general-purposed language that tends to support a step-by-step process to achieve a practical system. UML practices is considered a good development process and is crucial to the success of a software. Therefore, there are several types of UML models thar are used in different stages of the development process.</p>
 									<ol>
@@ -147,7 +149,8 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<li>Packaging and publishing Stage: Activity Diagram.</li>
 									</ol>
 									<p><i>Figure 3-7 Reference from "The Unified Modelling Language Reference Manual Second Edition"</i></p>
-									<p><b>State Machine Diagram Model of a Washing Machine. </b></p>
+									<span class="image main"><img src="images/SM_U3.png" alt="" /></span>
+									<p><b>Washing Machine State Machine Diagram. </b></p>
 									<p>Software architecture is an organizational structure of many systems that are connected and share interaction mechanisms.
 									Implementations are often guided by UML that informs the system design 
 									</p>
@@ -158,16 +161,19 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>Unit 4 explores further implementation technics in OOP. Important terminologies such as an object state and class inheritance were introduced. It was practically challenging at the first glance. Class inheritance indicates the use of a Super class and Sub class. In other words, the main class or system feature will contain attributes and methods and then the sub class will inherent those attributes and methods. This technique encourages the reusability of the syntax and provides a blueprint for future use. An example of this is shown below. </p>
+									<h3><u>Artefacts</u></h3>
 									<hr />
 									<header class="major">
 										<h2>Unit 5</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>This unit provides further practice on class inheritance, abstract classes and data structures. It was interesting to me to finally understand how data sets are compared in syntax using Union, Intersection, Difference and Symmetric. With the introduction of abstract class decorators, I think overall the elements in this unit will benefit me with producing an organized code structure. </p>
+									<h3><u>Artefacts</u></h3>
 									<h3>Polymorphism</h3>
-									<p>Polymorphism is a fundamental concept of OOP and it dictates the use of an entity in different forms. There many examples of polymorphism in python that range from simple addition operators to Class methods and inheritance (Programiz 2020). Method overriding is another example of polymorphism and it dictates the inheritance of class methods and attributes to fit a child class. An example of this shown in the python syntax below:</p>
-									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
-									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
+									<p>Polymorphism is a fundamental concept of OOP and it dictates the use of an entity in different forms. There many examples of polymorphism in python that range from simple addition operators to Class methods and inheritance (Programiz 2020). Method overriding is another example of polymorphism and it dictates the inheritance of class methods and attributes to fit a child class. An example of this shown in the python syntax below: <br />
+										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit5_PolyM.py">source code</a>.</p>
+									
+									
 									<pre><code>
 	class Car:
 	""" A class for all types of vehicles"""
@@ -210,7 +216,8 @@ car is started
 310
 
 									</code></pre>
-
+									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
+									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
 									<P><b><i>All references are recorded in unit 12 </i></b></P>
 									<hr />
 									<header class="major">
@@ -229,14 +236,17 @@ def name(self, new_name):
 	self._name = new_name
 									</code></pre>
 									<p>The above syntax represents 2 class methods with a property to decorator to restrict access to the attribute and setter to change the value. Validating in this case, is performed through an exception built-in function in python. This will ensure the correct data being inputted thus the data is validated.</p>
+									<h3><u>Artefacts</u></h3>
 									<hr />
 									<header class="major">
 										<h2>Unit 7</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>A as software engineer, am given the requirements to build a driverless car system. However, this part of the assignment requires me to only develop UML designs that showcases main software features and use cases during the pre-system implementation Phase. This assignment is considered as a great opportunity to apply the knowledge gained during previous units on UML design. First, A research was conducted on the main features of autonomous cars. which includes components such as environmental mapping, sensors and traffic recognition. As such, these components will be connected to the control unit that will interact with the driver. Several UML models were built based on the system requirement and level. The complete system design is recorded here.
+									<h3><u>Artefacts</u></h3>
 									<h3>Nested Dictionaries</h3>
-									<p> OOP development are supported by data structures such as dictionaries. This exercise aims to create nested dictionary within the Class Car. Data types will be retrieved using class methods items (), keys (), and values (). The Car Class will contain a dictionary as a class attribute in which car types, makes and year will be stored. class methods will then return the data types. An object is instantiated to add the data set.</p>
+									<p> OOP development are supported by data structures such as dictionaries. This exercise aims to create nested dictionary within the Class Car. Data types will be retrieved using class methods items (), keys (), and values (). The Car Class will contain a dictionary as a class attribute in which car types, makes and year will be stored. class methods will then return the data types. An object is instantiated to add the data set.
+										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit7_DataStructure.py">source code</a>.</p>
 									<pre><code>
 class Car:
 """ A class for all types of vehicles"""

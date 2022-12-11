@@ -83,11 +83,12 @@
 									<li>“Knowledge requirement (KR)”</li>	
 									<li>“Service contracts (SC)”</li>
 									</ol>	
-									<p><i>priority above is organized based on my personal opinion.</i></p>
+									<p><i>List priority above is organized based on my personal opinion.</i></p>
 									<p>architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
 									
 									<h3>Article Review:<i>Di Silvestro & Nadir (2021)</i> </h3>
 									<p>In an effort to enhance student learning experience and engagement in higher education, the article explores the benefits of student e-portfolios. This research was made to address the lack of publications encouraging the use of such platforms and its potential benefits. There are many aspects that one can benefit from putting together an e-portfolio. One surprising fact about the conducted research is that students were able to develop professional confidence over time. Personally, I have always thought that e-portfolios are mainly a place to showcase knowledge. However, having experienced building an e-portfolio myself, I can always go through previous tasks to revise my inputs on several subjects. I have found that this process helps in reaffirming gained knowledge throughout my learning process. As a result, students tend to gain confidence by re-observing their progress throughout education. </p>	
+									<P><b><i>All references are recorded in unit 12 </i></b></P>
 									<h3>Protected and unprotected Variables</h3>
 									<p>Data member in a class can be public, private or protected. Such variables use the symbol (_) underscore to determine the access type of the data member. In The following example, a class called BankAcount will be created. Within, a public, protected and private variables will be included. The following exercise aims to test the accessibility of each variable. </p>
 									<pre><code>
@@ -123,6 +124,11 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>Unit 2 further elaborates on software design and explains the importance of the Use case diagrams. I personally think that use case diagrams are an integral factor of understanding real-world actors and main system features. I have concluded that use case diagrams are considered to illustrate user behaviours and summarizes the relationship between actors and systems (Paradigm 2022). An instance of use case diagrams is provided below: </p>
+									<header class="major">
+										<h2>Unit 3</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 3 provides a deeper understanding of different types of UML diagrams. In my opinion a class diagram is the most vital of them all. That is because the diagram presents a link between main system features and actual implementation techniques. Class diagrams provides a preview of the main classes, class variables and class objects. Classes represent main system features and its range of relationships with each other. Other UML diagrams such as sequence, activity, and state diagrams represent different stages of the software design. I think unit 3 provides an overview of all system design tools and stages.  </p>
 									<h3>UML models, Software Development Life Cycle</h3>
 									<p>Unified modelling language or UML is a modelling technique the illustrates a detailed development process of a system (Jacobson et al. 2004). In other words, UML is a general-purposed language that tends to support a step-by-step process to achieve a practical system. UML practices is considered a good development process and is crucial to the success of a software. Therefore, there are several types of UML models thar are used in different stages of the development process.</p>
 									<ol>
@@ -135,10 +141,154 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<p><i>Figure 3-7 Reference from "The Unified Modelling Language Reference Manual Second Edition"</i></p>
 									<p><b>State Machine Diagram Model of a Washing Machine. </b></p>
 									<p>Software architecture is an organizational structure of many systems that are connected and share interaction mechanisms.
-										Implementations are often guided by UML that informs the system design 
+									Implementations are often guided by UML that informs the system design 
 									</p>
+									<P><b><i>All references are recorded in unit 12 </i></b></P>
+									<header class="major">
+										<h2>Unit 4</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 4 explores further implementation technics in OOP. Important terminologies such as an object state and class inheritance were introduced. It was practically challenging at the first glance. Class inheritance indicates the use of a Super class and Sub class. In other words, the main class or system feature will contain attributes and methods and then the sub class will inherent those attributes and methods. This technique encourages the reusability of the syntax and provides a blueprint for future use. An example of this is shown below. </p>
+									<header class="major">
+										<h2>Unit 5</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>This unit provides further practice on class inheritance, abstract classes and data structures. It was interesting to me to finally understand how data sets are compared in syntax using Union, Intersection, Difference and Symmetric. With the introduction of abstract class decorators, I think overall the elements in this unit will benefit me with producing an organized code structure. </p>
+									<h3>Polymorphism</h3>
+									<p>Polymorphism is a fundamental concept of OOP and it dictates the use of an entity in different forms. There many examples of polymorphism in python that range from simple addition operators to Class methods and inheritance (Programiz 2020). Method overriding is another example of polymorphism and it dictates the inheritance of class methods and attributes to fit a child class. An example of this shown in the python syntax below:</p>
+									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
+									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
+									<pre><code>
+	class Car:
+	""" A class for all types of vehicles"""
 
-							
+	def __init__(self, car_type):
+		self.car_type = car_type
+
+	def car_ignition(self):
+		print("car is started")
+
+	def car_off(self):
+		print("car is off")
+
+
+class Lambo(Car):
+	"""Class for one car type"""
+
+	def __init__(self, lane, car_type, speed=0):
+		super().__init__(car_type)
+		self.lane = lane
+		self.speed = speed
+
+	def accelerate(self):
+		print(self.speed + 10)
+
+	def decrease_speed(self):
+		return self.speed - 10
+
+
+car_1 = Lambo(1, 'Lambo', 300)
+print(car_1.car_type)
+car_1.car_ignition()
+car_1.accelerate()
+car_1.decrease_speed()
+									</code></pre>
+									<p><b>Results</b></p>
+									<pre><code>
+Lambo
+car is started
+310
+
+									</code></pre>
+
+									<P><b><i>All references are recorded in unit 12 </i></b></P>
+									<header class="major">
+										<h2>Unit 6</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>During unit 6, Encapsulation was introduced. In concept, encapsulation is when class attributes and data structurer a grouped together and the access is restricted. This is when Public and Public attributes was practiced. Class attributes or class variables can be accessed from within the class using property decorator which I though is similar to abstract class decorators. However, I learned that they can be access using getters and setter’s functions. Another concept that was introduced in this unit is Data Validation. Data validation is the process of ensuring that the data type input is correct. At first, I found it difficult to make the connection between Encapsulation and Data validation. However, after practicing the below code, the syntax stared to make since.   </p>
+									<pre><code>
+@property
+def name(self):
+	return self._name
+@name.setter
+def name(self, new_name):
+	if type(new_name) != str:
+	raise TypeError("Names must be expressed as a string")
+	self._name = new_name
+									</code></pre>
+									<p>The above syntax represents 2 class methods with a property to decorator to restrict access to the attribute and setter to change the value. Validating in this case, is performed through an exception built-in function in python. This will ensure the correct data being inputted thus the data is validated.</p>
+									<header class="major">
+										<h2>Unit 7</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>A as software engineer, am given the requirements to build a driverless car system. However, this part of the assignment requires me to only develop UML designs that showcases main software features and use cases during the pre-system implementation Phase. This assignment is considered as a great opportunity to apply the knowledge gained during previous units on UML design. First, A research was conducted on the main features of autonomous cars. which includes components such as environmental mapping, sensors and traffic recognition. As such, these components will be connected to the control unit that will interact with the driver. Several UML models were built based on the system requirement and level. The complete system design is recorded here.
+									<h3>Nested Dictionaries</h3>
+									<p> OOP development are supported by data structures such as dictionaries. This exercise aims to create nested dictionary within the Class Car. Data types will be retrieved using class methods items (), keys (), and values (). The Car Class will contain a dictionary as a class attribute in which car types, makes and year will be stored. class methods will then return the data types. An object is instantiated to add the data set.</p>
+									<pre><code>
+class Car:
+""" A class for all types of vehicles"""
+
+def __init__(self, car_type):
+	self.car_type = car_type
+
+def car_ignition(self):
+	print("car is started")
+
+def car_off(self):
+	print("car is off")
+
+
+class Lambo(Car):
+"""Class for one car type"""
+
+def __init__(self, lane, car_type, speed=0):
+	super().__init__(car_type)
+	self.lane = lane
+	self.speed = speed
+
+def accelerate(self):
+	print(self.speed + 10)
+
+def decrease_speed(self):
+	return self.speed - 10
+
+
+car_1 = Lambo(1, 'Lambo', 300)
+print(car_1.car_type)
+car_1.car_ignition()
+car_1.accelerate()
+car_1.decrease_speed()																
+									</code></pre>
+									<p><b>Results</b></p>
+									<pre><code>
+dict_keys(['Sedan', 'Hatchback'])
+dict_values([{'Toyota': 2013}, {'Volvo': 2014}])
+dict_items([('Sedan', {'Toyota': 2013}), ('Hatchback', {'Volvo': 2014})])
+									</code></pre>
+									<header class="major">
+										<h2>Unit 8</h2>
+									</header>
+									<h3>Forum Discussion:  Metamodel Design to support OOD of the IoT</h3>
+									<p>Object-Oriented Programming (OOP) is a foundational aspect of software development. Therefore, Fortino et al. (2015) introduces a new approach that aims to apply similar fundamentals to the Internet of Things (IoT).  OOP initiatives require planning and design during early development stages. systematic software design strategies such as UML, helps provide a blueprint to support the development. Similarly, Metamodel is an approach that supports analysis and implementation techniques that aids with the development of Smart objects to the IoT (Fortino, et al., 2015).
+										Metamodel approaches can strongly support and identify smart object functions in different abstraction levels. Early development phases must require efforts to understand main system design, relationships, and functional components. As such, metamodel approaches can provide abstract testing grounds for features in different phases of the system. 
+										Although system design planning approaches such as UML or Metamodel are supplemental factors of system development, it remains a challenge to include actual syntax within both approaches. That is because code components, functions, behaviours and algorithms are subject for constant change due to numerous factors during system implementation (Perez & Sellers 2008). A metamodel in concept provides a generalized approach of the system design. The inclusion of further implementation strategies can be time consuming and maybe inefficient. 
+									</p>
+									<P><b><i>All references are recorded in unit 12 </i></b></P>
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
 								</div>
 							</section>
 
@@ -151,7 +301,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Unit 3</h3>
+												<h3>Unit 9</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -167,7 +317,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Unit 3</h3>
+												<h3>Unit 10</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -183,7 +333,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Unit 4</h3>
+												<h3>Unit 11</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -198,7 +348,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h2>Unit 12</h2>
 									</header>
 									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
 									<ul class="actions">

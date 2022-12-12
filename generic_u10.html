@@ -71,78 +71,83 @@
                                     <li>Semantic error : Unnoticed by interpreter, the program is likely to produce incorrect results. </li>
                                     <li>Regression testing: Making sure testing the software has not introduced new errors.  </li>
                                     </ol>
+                                    <h3>Code Documentaion</h3>
+                                    <p>Code documentation is vital aspec of system development on the long-run. Its ensures proper  collaboration and code quality between developers. An example of this shown below.</p>
+                                    <pre><code>
+# Function for addition
+def add(x, y):
+    return x + y
+
+
+# Function for subtraction
+def subtract(x, y):
+    return x - y
+
+
+# Function for multiplication
+def multiply(x, y):
+    return x * y
+
+
+# Function for division
+def divide(x, y):
+    return x / y
+
+
+#  Function menu
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+# while loop for user input
+while True:
+    choice = input("Enter choice(1/2/3/4): ")
+
+    # Validates user choices
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+
+        # input for next calculation
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+
+        # breaks operation if the user inputs "no"
+        if next_calculation == "no":
+            break
+
+    else:
+        print("Invalid Input")
+
+                                    </code></pre>
                         
                                     
 								</div>
 							</section>
 
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-                                        <h3>Email</h3>
-										<a href="#">thgoda@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>TBA</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span><br />
-										Dubai<br />
-										United Arab Emirates</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 2022 </li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>

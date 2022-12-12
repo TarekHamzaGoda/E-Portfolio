@@ -162,7 +162,7 @@ AttributeError: 'BankAccount' object has no attribute '__account_balance'
 									<h3>Reflections & Terminologies </h3>
 									<p>Unit 4 explores further UML techniques. There was a great emphasis on the class and activity diagrams. I have learned that there are different types of views in which every diagram is represented by. For instance, Static views include class diagram, Design view included collaboration diagram and component diagrams and use case view includes use case diagrams. In the pervious units, I have explored working with a state machine diagram and use case diagram. This unit encourages to build an activity diagram for the driverless car. </p>
 									<h3><u>Artefacts</u></h3>
-									<p>Activity diagrams preview a component in the system in which computational activities are involved in the work flow. The above example is an activity diagram of the driverless car system and the activity between the control unit and the Vehicle to Vehicle Communication. </p>
+									<p>Activity diagrams preview a component in the system in which computational activities are involved in the work flow. The below example is an activity diagram of the driverless car system and the activity between the control unit and the Vehicle to Vehicle Communication. </p>
 									<span class="image main"><img src="images/ACC_U4.png" alt="" /></span>
 									
 									<hr />
@@ -222,7 +222,7 @@ car is started
 									</code></pre>
 									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
 									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
-									<P><b><i>All references are recorded in unit 12 </i></b></P>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 									<header class="major">
 										<h2>Unit 6</h2>
@@ -241,6 +241,97 @@ def name(self, new_name):
 									</code></pre>
 									<p>The above syntax represents 2 class methods with a property to decorator to restrict access to the attribute and setter to change the value. Validating in this case, is performed through an exception built-in function in python. This will ensure the correct data being inputted thus the data is validated.</p>
 									<h3><u>Artefacts</u></h3>
+									<p>Unit 6 also explores further implementation technics in OOP. Important terminologies such as an object state and class inheritance were introduced. It was practically challenging at the first glance. Class inheritance indicates the use of a Super class and Sub class. In other words, the main class or system feature will contain attributes and methods and then the sub class will inherent those attributes and methods. This technique encourages the reusability of the syntax and provides a blueprint for future use. An example of this is shown below by creating 3 abstract class methods and one subclass for banking operations. </p>
+									<pre><code>
+# Importing the abstract class module
+from abc import ABC, abstractmethod
+
+
+# creating the base class
+class BankOperations(ABC):
+
+	# creating abstract methods that will not be directly used
+	@abstractmethod
+	def current_balance(self):
+		raise NotImplementedError()  # for calculating and viewing balance
+
+	@abstractmethod
+	def transfer_money(self):
+		raise NotImplementedError  # to transfer money to another account
+
+	@abstractmethod
+	def deposit_money(self):
+		raise NotImplementedError  # to add money in account
+
+
+# Creating child class
+class Banking(BankOperations):
+
+	def __init__(self, my_balance=0):
+		self.my_balance = my_balance
+
+	# Class method to view current balance
+	def current_balance(self):
+		current_balance = self.my_balance
+		print("Your current balance is =", current_balance)
+		return
+
+	# Class method to view calculate money transfer
+	def transfer_money(self):
+		send_amount = (int(input("Enter amount: ")))
+		if self.my_balance <= send_amount:
+			print("Not enough balance in account")
+		else:
+			new_balance = self.my_balance - send_amount
+			self.my_balance = new_balance
+			print("Amount Sent!. New balance is", new_balance)
+
+	# Class method to view calculate money deposit
+	def deposit_money(self):
+		deposit_amount = (int(input("Enter deposit amount: ")))
+		new_deposit_amount = deposit_amount + self.my_balance
+		self.my_balance = new_deposit_amount
+		print("Deposit completed, new balance is", {self.my_balance})
+
+
+# Creating object with default balance of 1000
+bank_operator = Banking(1000)
+
+
+# Creating user menu interface
+def bank_app():
+	operation = int(input(""" Choose an operation:
+	1. Current Balance
+	2. Transfer Money
+	3. Deposit Money
+	4. Exit
+	Your input: """))
+
+	# object name is added as a parameter
+	if operation == 1:
+		Banking.current_balance(self=bank_operator)
+		bank_app()
+
+	elif operation == 2:
+		Banking.transfer_money(self=bank_operator)
+		bank_app()
+
+	elif operation == 3:
+		Banking.deposit_money(self=bank_operator)
+		bank_app()
+
+	elif operation == 4:
+		print("Thank you!")
+		exit()
+
+	else:
+		print("Wrong input!")
+
+
+bank_app()
+
+									</code></pre>
+									<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit6_abstract%20class.py">source code</a>.</p>
 									<hr />
 									<header class="major">
 										<h2>Unit 7</h2>

@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>OOP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Tarek Goda</strong>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Object-Oriented Programming</a></li>
+							<li><a href="generic.html">Network & information Security</a></li>
+							<li><a href="elements.html">WIP</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>(OOP) Reflections, Artefacts & Documentation</h1>
+							</header>
+							<div class="content">
+								<p>Welcome to my Object Object-Orientated module ePortfolio.<br />
+								Below you will find  reflections, assignments and information gathered from all units.</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Unit 1</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 1 introduces UML Design & Object-oriented programming in python. My objective for this unit is to understand the main syntax, create classes, class method & Attributes. </p>
+									<h3>Forum Discussion: Factors that Influence Reusability</h3>
+									<p>One important aspect of Object-Orientated Programming is code reusability. Over the years, software engineers were able to advance in OOP practices across all industries by leveraging existent codes. OOM or object-oriented metrics aims to measure the reusability of software codes and data organization that can assist with efficient OOP development. In an article by Padhy et al (2018), researchers have established several properties in which code quality is measured.</p>
+									<ol>
+									<li>“Architecture driven approach (ADP)”</li>
+									<li>“An Algorithm used in the program (AP)”</li>
+									<li>“Modules in the program (MIP)”</li>
+									<li>“Requirement Analysis (RA)”</li>
+									<li>“Design Patterns (DP)”</li>	
+									<li>“Documentation in project (DIP)”</li>	
+									<li>“Test Cases/Test Design (TCTD)”</li>	
+									<li>“Used in the data project (UD)”</li>	
+									<li>“Models in the project (MP)”</li>	
+									<li>“Knowledge requirement (KR)”</li>	
+									<li>“Service contracts (SC)”</li>
+									</ol>	
+									<p><i>List priority above is organized based on my personal opinion.</i></p>
+									<p>architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<h3>Article Review:<i>Di Silvestro & Nadir (2021)</i> </h3>
+									<p>In an effort to enhance student learning experience and engagement in higher education, the article explores the benefits of student e-portfolios. This research was made to address the lack of publications encouraging the use of such platforms and its potential benefits. There are many aspects that one can benefit from putting together an e-portfolio. One surprising fact about the conducted research is that students were able to develop professional confidence over time. Personally, I have always thought that e-portfolios are mainly a place to showcase knowledge. However, having experienced building an e-portfolio myself, I can always go through previous tasks to revise my inputs on several subjects. I have found that this process helps in reaffirming gained knowledge throughout my learning process. As a result, students tend to gain confidence by re-observing their progress throughout education. </p>	
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<h3><u>Artefacts</u></h3>
+									<h3>Protected and unprotected Variables</h3>
+									<p>Data member in a class can be public, private or protected. Such variables use the symbol (_) underscore to determine the access type of the data member (Tutorials 2017). 
+										In The following example, a class called BankAcount will be created. Within, a public, protected and private variables will be included. The following exercise aims to test the accessibility of each variable. <a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit1_Variables.py">source code</a>. </p>
+									<pre><code>
+class BankAccount():
+""" A class to hold account information"""
+									
+	def __init__(self, account_num, account_name, account_balance):
+	self.account_num = account_num  # Public
+	self._account_name = account_name  # Protected
+	self._account_balance = account_balance  # Private
+									
+									
+# Creating Objects
+Customer_1 = BankAccount("AE41221", "John", 90223)
+accn = Customer_1.account_num
+accname = Customer_1._account_name
+accb = Customer_1.__account_balance
+									
+									
+print(accn)
+print(accname)
+print(accb) # Error				
+									</code></pre>
+									<p><b>Results</b></p>
+									<pre><code>
+AE41221
+John
+AttributeError: 'BankAccount' object has no attribute '__account_balance'
+									</Code></pre>
+									<p>Public variables can be accessed from outside the class while accessing private classes will result in an error. However, Private Variables can still be accessed by a member function of the class. </p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<hr />
+									<header class="major">
+										<h2>Unit 2</h2>
+									</header>
+									<h3>Reflections Artefacts, & Terminologies </h3>
+									<p>Unit 2 further elaborates on software design and explains the importance of the Use case diagrams. I personally think that use case diagrams are an integral factor of understanding real-world actors and main system features. I have concluded that use case diagrams are considered to illustrate user behaviours and summarizes the relationship between actors and systems (Paradigm 2022).</p>
+									<p> An instance of use case diagrams (Self-Driving Car) is provided below: </p>
+									<span class="image main"><img src="images/USECASE_U2.png" alt="" /></span>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+							
+									<hr />
+									<header class="major">
+										<h2>Unit 3</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 3 provides a deeper understanding of different types of UML diagrams. In my opinion a class diagram is the most vital of them all. That is because the diagram presents a link between main system features and actual implementation techniques. Class diagrams provides a preview of the main classes, class variables and class objects. Classes represent main system features and its range of relationships with each other. Other UML diagrams such as sequence, activity, and state diagrams represent different stages of the software design. I think unit 3 provides an overview of all system design tools and stages.  </p>
+									<h3><u>Artefacts</u></h3>
+									<h3>UML models, Software Development Life Cycle</h3>
+									<p>Unified modelling language or UML is a modelling technique the illustrates a detailed development process of a system (Jacobson et al. 2004). In other words, UML is a general-purposed language that tends to support a step-by-step process to achieve a practical system. UML practices is considered a good development process and is crucial to the success of a software. Therefore, there are several types of UML models thar are used in different stages of the development process.</p>
+									<ol>
+									<li>User Requirements Stage: Use Case Diagram, Activity Diagrams, Deployment Diagram</li>
+									<li>System Implementation Stage: Class Diagram, State Machine Diagram </li>	
+									<li>Development Stage: Use Case Diagram, Sequence Diagram, State Machine Diagram  </li>
+									<li>Validation and Testing Stage: State Transition Diagram</li>
+									<li>Packaging and publishing Stage: Activity Diagram.</li>
+									</ol>
+									<p><i>Figure 3-7 Reference from "The Unified Modelling Language Reference Manual Second Edition"</i></p>
+									<span class="image main"><img src="images/SM_U3.png" alt="" /></span>
+									<p><b>Washing Machine State Machine Diagram. </b></p>
+									<p>Software architecture is an organizational structure of many systems that are connected and share interaction mechanisms.
+									Implementations are often guided by UML that informs the system design 
+									</p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<hr />
+									<header class="major">
+										<h2>Unit 4</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>Unit 4 explores further UML techniques. There was a great emphasis on the class and activity diagrams. I have learned that there are different types of views in which every diagram is represented by. For instance, Static views include class diagram, Design view included collaboration diagram and component diagrams and use case view includes use case diagrams. In the pervious units, I have explored working with a state machine diagram and use case diagram. This unit encourages to build an activity diagram for the driverless car. </p>
+									<h3><u>Artefacts</u></h3>
+									<p>Activity diagrams preview a component in the system in which computational activities are involved in the work flow. The below example is an activity diagram of the driverless car system and the activity between the control unit and the Vehicle to Vehicle Communication. </p>
+									<span class="image main"><img src="images/ACC_U4.png" alt="" /></span>
+									
+									<hr />
+									<header class="major">
+										<h2>Unit 5</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>This unit provides further practice on classes, class inheritance, abstract classes and data structures. It was interesting to me to finally be able to build the relation between the class diagram and the actual implementation. Concepts of polymorphism and variable constructors where introduced. Such concepts provide great benefits in executing the class methods upon object creation. Key terminologies as such support the development of the code structure. Apart from the initializer __int__ and method decorators, I would like to explore other constructors that can support my development of the driverless car system.  </p>
+									
+									<h3><u>Artefacts</u></h3>
+									<h3>Polymorphism</h3>
+									<p>Polymorphism is a fundamental concept of OOP and it dictates the use of an entity in different forms. There many examples of polymorphism in python that range from simple addition operators to Class methods and inheritance (Programiz 2020). Method overriding is another example of polymorphism and it dictates the inheritance of class methods and attributes to fit a child class. An example of this shown in the python syntax below: <br />
+										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit5_PolyM.py">source code</a>.</p>
+									
+									
+									<pre><code>
+	class Car:
+	""" A class for all types of vehicles"""
+
+	def __init__(self, car_type):
+		self.car_type = car_type
+
+	def car_ignition(self):
+		print("car is started")
+
+	def car_off(self):
+		print("car is off")
+
+
+class Lambo(Car):
+	"""Class for one car type"""
+
+	def __init__(self, lane, car_type, speed=0):
+		super().__init__(car_type)
+		self.lane = lane
+		self.speed = speed
+
+	def accelerate(self):
+		print(self.speed + 10)
+
+	def decrease_speed(self):
+		return self.speed - 10
+
+
+car_1 = Lambo(1, 'Lambo', 300)
+print(car_1.car_type)
+car_1.car_ignition()
+car_1.accelerate()
+car_1.decrease_speed()
+									</code></pre>
+									<p><b>Results</b></p>
+									<pre><code>
+Lambo
+car is started
+310
+
+									</code></pre>
+									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
+									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<hr />
+									<header class="major">
+										<h2>Unit 6</h2>
+									</header>
+									<h3>Reflections & Terminologies </h3>
+									<p>During unit 6, Encapsulation was introduced. In concept, encapsulation is when class attributes and data structurer a grouped together and the access is restricted. This is when Public and Public attributes was practiced. Class attributes or class variables can be accessed from within the class using property decorator which I though is similar to abstract class decorators. However, I learned that they can be access using getters and setter’s functions. Another concept that was introduced in this unit is Data Validation. Data validation is the process of ensuring that the data type input is correct. At first, I found it difficult to make the connection between Encapsulation and Data validation. However, after practicing the below code, the syntax stared to make since.   </p>
+									<pre><code>
+@property
+def name(self):
+	return self._name
+@name.setter
+def name(self, new_name):
+	if type(new_name) != str:
+	raise TypeError("Names must be expressed as a string")
+	self._name = new_name
+									</code></pre>
+									<p>The above syntax represents 2 class methods with a property to decorator to restrict access to the attribute and setter to change the value. Validating in this case, is performed through an exception built-in function in python. This will ensure the correct data being inputted thus the data is validated.</p>
+									<h3><u>Artefacts</u></h3>
+									<p>Unit 6 also explores further implementation technics in OOP. Important terminologies such as an object state and class inheritance were introduced. It was practically challenging at the first glance. Class inheritance indicates the use of a Super class and Sub class. In other words, the main class or system feature will contain attributes and methods and then the sub class will inherent those attributes and methods. This technique encourages the reusability of the syntax and provides a blueprint for future use. An example of this is shown below by creating 3 abstract class methods and one subclass for banking operations. </p>
+									<pre><code>
+# Importing the abstract class module
+from abc import ABC, abstractmethod
+
+
+# creating the base class
+class BankOperations(ABC):
+
+	# creating abstract methods that will not be directly used
+	@abstractmethod
+	def current_balance(self):
+		raise NotImplementedError()  # for calculating and viewing balance
+
+	@abstractmethod
+	def transfer_money(self):
+		raise NotImplementedError  # to transfer money to another account
+
+	@abstractmethod
+	def deposit_money(self):
+		raise NotImplementedError  # to add money in account
+
+
+# Creating child class
+class Banking(BankOperations):
+
+	def __init__(self, my_balance=0):
+		self.my_balance = my_balance
+
+	# Class method to view current balance
+	def current_balance(self):
+		current_balance = self.my_balance
+		print("Your current balance is =", current_balance)
+		return
+
+	# Class method to view calculate money transfer
+	def transfer_money(self):
+		send_amount = (int(input("Enter amount: ")))
+		if self.my_balance <= send_amount:
+			print("Not enough balance in account")
+		else:
+			new_balance = self.my_balance - send_amount
+			self.my_balance = new_balance
+			print("Amount Sent!. New balance is", new_balance)
+
+	# Class method to view calculate money deposit
+	def deposit_money(self):
+		deposit_amount = (int(input("Enter deposit amount: ")))
+		new_deposit_amount = deposit_amount + self.my_balance
+		self.my_balance = new_deposit_amount
+		print("Deposit completed, new balance is", {self.my_balance})
+
+
+# Creating object with default balance of 1000
+bank_operator = Banking(1000)
+
+
+# Creating user menu interface
+def bank_app():
+	operation = int(input(""" Choose an operation:
+	1. Current Balance
+	2. Transfer Money
+	3. Deposit Money
+	4. Exit
+	Your input: """))
+
+	# object name is added as a parameter
+	if operation == 1:
+		Banking.current_balance(self=bank_operator)
+		bank_app()
+
+	elif operation == 2:
+		Banking.transfer_money(self=bank_operator)
+		bank_app()
+
+	elif operation == 3:
+		Banking.deposit_money(self=bank_operator)
+		bank_app()
+
+	elif operation == 4:
+		print("Thank you!")
+		exit()
+
+	else:
+		print("Wrong input!")
+
+
+bank_app()
+
+									</code></pre>
+									<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit6_abstract%20class.py">source code</a>.</p>
+									<hr />
+									<header class="major">
+										<h2>Unit 7</h2>
+									</header>
+									<h3>Reflections & Evaluation(Driverless Car System Design) </h3>
+									<p>A as software engineer, am given the requirements to build a driverless car system. However, this part of the assignment requires me to only develop UML designs that showcases main software features and use cases during the pre-system implementation Phase. This assignment is considered as a great opportunity to apply the knowledge gained during previous units on UML design. First, A research was conducted on the main features of autonomous cars. which includes components such as environmental mapping, sensors and traffic recognition. As such, these components will be connected to the control unit that will interact with the driver. Several UML models were built based on the system requirement and level. 
+									The complete system design is <a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/02_Driverless_Car/Autonumus_SystemDesign.pdf">recorded here</a>.</p>
+									<h3><u>Artefacts</u></h3>
+									<h3>Nested Dictionaries</h3>
+									<p> OOP development are supported by data structures such as dictionaries. This exercise aims to create nested dictionary within the Class Car. Data types will be retrieved using class methods items (), keys (), and values (). The Car Class will contain a dictionary as a class attribute in which car types, makes and year will be stored. class methods will then return the data types. An object is instantiated to add the data set.
+										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit7_DataStructure.py">source code</a>.</p>
+									<pre><code>
+class Car:
+""" A class for all types of vehicles"""
+
+def __init__(self, car_type):
+	self.car_type = car_type
+
+def car_ignition(self):
+	print("car is started")
+
+def car_off(self):
+	print("car is off")
+
+
+class Lambo(Car):
+"""Class for one car type"""
+
+def __init__(self, lane, car_type, speed=0):
+	super().__init__(car_type)
+	self.lane = lane
+	self.speed = speed
+
+def accelerate(self):
+	print(self.speed + 10)
+
+def decrease_speed(self):
+	return self.speed - 10
+
+
+car_1 = Lambo(1, 'Lambo', 300)
+print(car_1.car_type)
+car_1.car_ignition()
+car_1.accelerate()
+car_1.decrease_speed()																
+									</code></pre>
+									<p><b>Results</b></p>
+									<pre><code>
+dict_keys(['Sedan', 'Hatchback'])
+dict_values([{'Toyota': 2013}, {'Volvo': 2014}])
+dict_items([('Sedan', {'Toyota': 2013}), ('Hatchback', {'Volvo': 2014})])
+									</code></pre>
+									<hr />
+									<header class="major">
+										<h2>Unit 8</h2>
+									</header>
+									<h3>Reflections Artefacts & Terminologies</h3>
+									<p>Unit 8’s theme was on understanding how data sets are compared in syntax using Union, Intersection, Difference and Symmetric. I think overall the elements in this unit will benefit me with producing an organized code structure and help understand types of data that will be include in syntax. To summarize, data set operations include the following:</p>
+									<ol>
+									<li><b>Union:</b> Items present in all sets</li>
+									<li><b>Intersection:</b> Items the are common between 2 sets</li>
+									<li><b>Difference:</b> Items that are only in 1 set</li>
+									<li><b>Symmetric Difference: </b>items that are not common between 2 sets.</li>
+									</ol>
+									<p>The code below demonstrates set operations between 2 data sets (Shopping basket)</p>
+
+									<pre><code>
+# Set operations on data ( shopping basket )
+
+basket_1 = {'apple', 'mango', 'salt', 'shampoo', 'rice', 'milk'}
+basket_2 = {'tissues', 'soup', 'gum', 'mango', 'pepper', 'rice', 'apple'}
+
+union = basket_1 & basket_2
+differance = basket_1 - basket_2
+intersection = basket_1 | basket_2
+symmetric_difference = basket_1 ^ basket_2
+
+print(union)
+print(differance)
+print(intersection)
+print(symmetric_difference)									
+									</code></pre>
+									<p><b>Results </b></p>
+									<pre><code>
+{'mango', 'apple', 'rice'}
+{'shampoo', 'milk', 'salt'}
+{'mango', 'shampoo', 'gum', 'soup', 'milk', 'pepper', 'apple', 'rice', 'tissues', 'salt'}
+{'shampoo', 'tissues', 'salt', 'gum', 'soup', 'pepper', 'milk'}
+									</code></pre>
+									<p><a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit8_Datasets.py">source code</a>.</p></p>
+
+									<h3>Forum Discussion:  Metamodel Design to support OOD of the IoT</h3>
+									<p>Object-Oriented Programming (OOP) is a foundational aspect of software development. Therefore, Fortino et al. (2015) introduces a new approach that aims to apply similar fundamentals to the Internet of Things (IoT).  OOP initiatives require planning and design during early development stages. systematic software design strategies such as UML, helps provide a blueprint to support the development. Similarly, Metamodel is an approach that supports analysis and implementation techniques that aids with the development of Smart objects to the IoT (Fortino, et al., 2015).
+										Metamodel approaches can strongly support and identify smart object functions in different abstraction levels. Early development phases must require efforts to understand main system design, relationships, and functional components. As such, metamodel approaches can provide abstract testing grounds for features in different phases of the system. 
+										Although system design planning approaches such as UML or Metamodel are supplemental factors of system development, it remains a challenge to include actual syntax within both approaches. That is because code components, functions, behaviours and algorithms are subject for constant change due to numerous factors during system implementation (Perez & Sellers 2008). A metamodel in concept provides a generalized approach of the system design. The inclusion of further implementation strategies can be time consuming and maybe inefficient. 
+									</p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<hr />
+									<header class="major">
+										<h2>Unit 9</h2>
+									</header>
+									<h3>Reflections & Terminologies</h3>
+									<p>Unit 9 elaborates on testing approaches and consistent debugging and how testing is considered a vital practice in system development. I think that testing methodologies should be invested on as it necessary for the long-term system development. This unit introduces different types of testing approaches such as manual testing, automated testing and black box testing. The purpose of this is to insure reliable software development process.</p>
+									<h3><u>Artefacts</u></h3>
+									<h3>Cyclomatic Complexity</h3>
+									<p>CC or cyclomatic complexity is unit that defines the possible number of paths inside a code and calculated using McCabe’s Formula:</p>
+									<p><b>Complexity = Graph edges – Graph Nodes + 2(Connected Components)</b></p>
+									<pre><code>
+M = E – N + 2P
+									</code></pre>
+									<p>A Code can be translated into graphs in order to calculate its complexity. This exercise will be applied on the following code.</p>
+									<pre><code>
+public static string IntroducePerson(string name, int age)
+{
+	var response = $"Hi! My name is {name} and I'm {age} years old.";
+
+	if (age >= 18)
+		response += " I'm an adult.";
+
+	if (name.Length > 7)
+		response += " I have a long name.";
+
+	return response;
+}
+
+									</code></pre>
+									<pre><code>
+Assignment > if > Concatenation > if > Concatenation>Return
+Nodes = 6
+Egdges = 5
+M =  6 – 5 + 2(1)
+Cyclomatic Complexity = 3 
+									</code></pre>
+									<p>Often engineers strive for low CC results (Schults, 2021). The complexity of the code can make it difficult to read and can contribute to maintenance issues during the development cycle.</p>
+									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="generic_u9.html" class="image">
+										<img src="images/u10bug.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Unit 10</h3>
+											</header>
+											<p>Reflections & Artefacts</p>
+											<ul class="actions">
+												<li><a href="generic_u10.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/u11l.jpg" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Unit 11</h3>
+											</header>
+											<p>Reflections & Artefacts</p>
+											<ul class="actions">
+												<li><a href="generic_u11.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/u12l.jpg" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Unit 12</h3>
+											</header>
+											<p>Object-Oriented Programming Module Reflection & Referances</p>
+											<ul class="actions">
+												<li><a href="generic_u12.html" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Professional Skills Matrix and action plan</h2>
+									</header>
+									<p>Achivements, Goals & Actions</p>
+									<ul class="actions">
+										<li><a href="PSMA.html" class="button next">Get Started</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -221,20 +221,20 @@
 										UK post codes consists of two parts, an “outcode” and an “incode”. Each consists of two – four characters follower by a space, then another three characters. A regex pattern can be extracted from a post code if we comply with a basic rule. An outcode consists of 1-2 letters followed by a character that is aways numeric, followed by and optional letter or number. Example (AA1A / A1A/ AA11 etc). An incode is separated by a single or multiple space, followed by a numeric character, followed by 2 letters. This regex pattern also limits the length of the input to match the UK post code format, thus protecting for ReDos. Check the code below. 
 									</p>
 									<pre><code>
-										import re
+import re
 
 
-										def validate_uk_postcode(user_input):
-											"""A function to validate user post codes inputs using regex match function"""
-										
-											return bool(re.match(r"^(((([A-Z][A-Z]{0,1})[0-9][A-Z0-9]{0,1}) {0,}[0-9])[A-Z]{2})$", user_input))
-										
-										
-										test_codes = ["M1 1AA", "M60 1NW", "CR2 6XH", "DN55 1PT", "W1A 1HQ", "EC1A 1BB", "12312asda"]
-										
-										
-										for user_input in test_codes:
-											print(validate_uk_postcode(user_input))
+def validate_uk_postcode(user_input):
+	"""A function to validate user post codes inputs using regex match function"""
+
+	return bool(re.match(r"^(((([A-Z][A-Z]{0,1})[0-9][A-Z0-9]{0,1}) {0,}[0-9])[A-Z]{2})$", user_input))
+
+
+test_codes = ["M1 1AA", "M60 1NW", "CR2 6XH", "DN55 1PT", "W1A 1HQ", "EC1A 1BB", "12312asda"]
+
+
+for user_input in test_codes:
+	print(validate_uk_postcode(user_input))
 									</code></pre>
 									<hr />
 
@@ -242,65 +242,63 @@
 
 
 									<header class="major">
-										<h2>Unit 5</h2>
+									<h2>Unit 5</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
-									<p>This unit provides further practice on classes, class inheritance, abstract classes and data structures. It was interesting to me to finally be able to build the relation between the class diagram and the actual implementation. Concepts of polymorphism and variable constructors where introduced. Such concepts provide great benefits in executing the class methods upon object creation. Key terminologies as such support the development of the code structure. Apart from the initializer __int__ and method decorators, I would like to explore other constructors that can support my development of the driverless car system.  </p>
-									
-									<h3><u>Artefacts</u></h3>
-									<h3>Polymorphism</h3>
-									<p>Polymorphism is a fundamental concept of OOP and it dictates the use of an entity in different forms. There many examples of polymorphism in python that range from simple addition operators to Class methods and inheritance (Programiz 2020). Method overriding is another example of polymorphism and it dictates the inheritance of class methods and attributes to fit a child class. An example of this shown in the python syntax below: <br />
-										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit5_PolyM.py">source code</a>.</p>
-									
-									
+									<p>
+										This unit explores the various testing modules offered by python such as pylint, unitest and flack8. I think this unit provides a clear approach on the testing strategies, especially during the codio exercise. I have learned how to import the testing scripts to my main file and incorporate testing models for each of my code block that presents different system features. 		
+									</p>
+									<h3>Team Notes</h3>
+									<p>
+										During this meeting, the following work in progress topics were discussed:
+									</p>
+									<P>
+										<li>
+											Framework to build the web application. We debated wither Django, Flask or Bottle is the best framework to integrate system features and the SQL database. We also researched tutorial to help us build the syntax in order to lunch the application.
+										</li>
+										<li>
+											Secure Software development. We tried to source external libraries that can assist us in building the OTP and encryption features.
+										</li>
+										<li>
+											SQL database management tools. Tested out few tables on SQLite, MySQL and SQL server. 
+										</li>
+									</P>
+									<p>
+										The above points assisted us with identifying the required tools to build our application. That is because our design proposal will cover the processes and frameworks needed to execute the web app. 
+									</p>
+									<h3>Portfolio Component: Cyclomatic Complexity</h3>
+									<p>
+										Cyclomatic Complexity in my opinion is still reelevated when it comes to developing a secure software. Cyclomatic Complexity is a quantitative measure of the complexity of a software program's control flow, and it can be used as an indicator of the potential risk and maintainability of the code. Higher CC values can indicate the likelihood od in introducing security vulnerabilities. Although CC is just one of many factors to consider in developing a secure software, it provides an overall matric of the level complexity of the code in which few initiatives can be taken to refactor the code and the value of test cases. 
+									</p>
+									<h3>Artefacts: Testing</h3>
+									<p>
+										The unit test module in python is imported to conduct a test case on our previous regex syntax that validates the UK post codes. In the previous code, the built-in test in a from of a “for loop” was added to validate the user input. For the unit test to succeed, the built-in tester will be removed. A class will be created to test the validation function in the post code checker file. Several assert functions will evaluate if the post code is True. See the code below: 
+									</p>
 									<pre><code>
-	class Car:
-	""" A class for all types of vehicles"""
-
-	def __init__(self, car_type):
-		self.car_type = car_type
-
-	def car_ignition(self):
-		print("car is started")
-
-	def car_off(self):
-		print("car is off")
+import unittest
+import Unit4_Regex
 
 
-class Lambo(Car):
-	"""Class for one car type"""
+class PostCodeTester(unittest.TestCase):
 
-	def __init__(self, lane, car_type, speed=0):
-		super().__init__(car_type)
-		self.lane = lane
-		self.speed = speed
-
-	def accelerate(self):
-		print(self.speed + 10)
-
-	def decrease_speed(self):
-		return self.speed - 10
+	def test_Unit4_Regex(self):
+		self.assertEqual(Unit4_Regex.validate_uk_postcode("M1 1AA"), True)
+		self.assertEqual(Unit4_Regex.validate_uk_postcode("M60 1NW"), True)
+		self.assertEqual(Unit4_Regex.validate_uk_postcode("CR2 6XH"), True)
+		self.assertEqual(Unit4_Regex.validate_uk_postcode("23123123s"), True)
 
 
-car_1 = Lambo(1, 'Lambo', 300)
-print(car_1.car_type)
-car_1.car_ignition()
-car_1.accelerate()
-car_1.decrease_speed()
+if __name__ == '__main__':
+	unittest.main()
 									</code></pre>
-									<p><b>Results</b></p>
-									<pre><code>
-Lambo
-car is started
-310
-
-									</code></pre>
-									<p>The main class CAR contains class methods that will be inherited by the child class LAMBO. No methods were overridden however additional class methods were added in the child class.</p>
-									<p><i><b>Note:</b>This is an example of the code that will be implemented on the autonomous car system.  </i></p>
 									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
 									<hr />
+
+
+
+
 									<header class="major">
-										<h2>Unit 6</h2>
+									<h2>Unit 6</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
 									<p>During unit 6, Encapsulation was introduced. In concept, encapsulation is when class attributes and data structurer a grouped together and the access is restricted. This is when Public and Public attributes was practiced. Class attributes or class variables can be accessed from within the class using property decorator which I though is similar to abstract class decorators. However, I learned that they can be access using getters and setter’s functions. Another concept that was introduced in this unit is Data Validation. Data validation is the process of ensuring that the data type input is correct. At first, I found it difficult to make the connection between Encapsulation and Data validation. However, after practicing the below code, the syntax stared to make since.   </p>

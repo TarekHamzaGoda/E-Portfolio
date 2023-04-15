@@ -47,10 +47,10 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>(OOP) Reflections, Artefacts & Documentation</h1>
+								<h1>(SSD) Reflections, Artefacts & Documentation</h1>
 							</header>
 							<div class="content">
-								<p>Welcome to my Object Object-Orientated module ePortfolio.<br />
+								<p>Welcome to my Secure Software Development module ePortfolio.<br />
 								Below you will find  reflections, assignments and information gathered from all units.</p>
 							</div>
 						</div>
@@ -63,64 +63,24 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Unit 1</h2>
+									<h2>Unit 1</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
-									<p>Unit 1 introduces UML Design & Object-oriented programming in python. My objective for this unit is to understand the main syntax, create classes, class method & Attributes. </p>
-									<h3>Forum Discussion: Factors that Influence Reusability</h3>
-									<p>One important aspect of Object-Orientated Programming is code reusability. Over the years, software engineers were able to advance in OOP practices across all industries by leveraging existent codes. OOM or object-oriented metrics aims to measure the reusability of software codes and data organization that can assist with efficient OOP development. In an article by Padhy et al (2018), researchers have established several properties in which code quality is measured.</p>
-									<ol>
-									<li>“Architecture driven approach (ADP)”</li>
-									<li>“An Algorithm used in the program (AP)”</li>
-									<li>“Modules in the program (MIP)”</li>
-									<li>“Requirement Analysis (RA)”</li>
-									<li>“Design Patterns (DP)”</li>	
-									<li>“Documentation in project (DIP)”</li>	
-									<li>“Test Cases/Test Design (TCTD)”</li>	
-									<li>“Used in the data project (UD)”</li>	
-									<li>“Models in the project (MP)”</li>	
-									<li>“Knowledge requirement (KR)”</li>	
-									<li>“Service contracts (SC)”</li>
-									</ol>	
-									<p><i>List priority above is organized based on my personal opinion.</i></p>
+									<p>Unit 1 introduces software development strategies such as waterfall and agile approaches. Both methodologies are different in terms of application in which the development workflow is unique. 
+										While waterflow methods indicates the development of each software component individually (isolated Phases) based on comprehensive planning, agile approaches require iterative cycles where each component can run in parallel (Thesing, et al., 2021). In my opinion, agile methods are more relevant today’s rapid market conditions. That is because adopting this method advocates a step-by-step solution and coordinates interim results in short cycles. One reason for this is that the client specifies generalized goals but cannot yet specify detailed requirements of the software. With a brief planning horizon, I think agile approaches allows for flexibility that is need in the initial project phases. 
+										</p>
+									<h3>Team Notes</h3>
+									<p>Following my introduction to the team members, we agreed to setup a workshop to draft the team contract and to setup a weekly progress meeting schedule. We had a brief chat on the design document topics and we have decided to upload gathered information to a shared drive to track our progress. </p>
+
 									<p>architecture ADP and algorithm AP are the main structure of the system. Code reusability often depends on the success of both aspects. Thus, ADP and AP are one of the first indicator of code quality. MIP, RA, and DP are tested with respect to project requirements. Similarities in implementation can also indicate the reusability of the code. Another important code quality indictor is TCTD, which in return insure the validity of the pervious reusable properties. </p>
 									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
-									<h3>Article Review:<i>Di Silvestro & Nadir (2021)</i> </h3>
-									<p>In an effort to enhance student learning experience and engagement in higher education, the article explores the benefits of student e-portfolios. This research was made to address the lack of publications encouraging the use of such platforms and its potential benefits. There are many aspects that one can benefit from putting together an e-portfolio. One surprising fact about the conducted research is that students were able to develop professional confidence over time. Personally, I have always thought that e-portfolios are mainly a place to showcase knowledge. However, having experienced building an e-portfolio myself, I can always go through previous tasks to revise my inputs on several subjects. I have found that this process helps in reaffirming gained knowledge throughout my learning process. As a result, students tend to gain confidence by re-observing their progress throughout education. </p>	
+									<h3>Discussion 1 </h3>
+									<p>According to OWASP, code injection is a security risk that allows attackers to breach and manipulated the database of a targeted system. 94% of tested web applications provide evidence of code injection instances of some sort and is considered one of the most common vulnerabilities (Anon. 2021). There are various types of code injection attacks in which hackers exploit application flaws where input validation is performed before the data is sent to the server. Therefore, one of the most common attacks is performed by executing malicious code on the application through dedicated user input fields (Plesky 2020). For this discussion, an instance of code injection attacks will be illustrated using a Use Case diagram that represents a payment portal of an e-commerce web application.  
+										Use case diagrams can be designed to identify possible database breaches and prevention strategies. In this instance, the diagram illustrates the authentication of malicious SQL quires that can result in a data breach.  Since SQL is frequently used in web applications to manage data structures, attackers can target crucial information and claim control of the database by accessing, modifying or removing sensitive information. This scenario explores the possibility of injecting SQL quires within user input parameters in which the attacker can gain access to sensitive payment information or users database. 
+										There are many prevention techniques proposed by the OWSAP that protects against code injection attacks, one of which is Input Validation. This process aims to verify the types of input submitted by the user. Input Validation ensures that the accepted type of input is constrained in length, format and type (Anon. 2021).  Once parameters are satisfied only then the input can be processed. The are various types of input validation strategies that include fixed input values, the use of parameterized queries, etc. Therefore, SQL injection flaws can be avoided by monitoring and validating user supplied input.  Code injections is considered a major security threat to web applications. Identifying design flaws and possible attacks during systems design can help protect the system’s database.  
+										</p>	
 									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
-									<h3><u>Artefacts</u></h3>
-									<h3>Protected and unprotected Variables</h3>
-									<p>Data member in a class can be public, private or protected. Such variables use the symbol (_) underscore to determine the access type of the data member (Tutorials 2017). 
-										In The following example, a class called BankAcount will be created. Within, a public, protected and private variables will be included. The following exercise aims to test the accessibility of each variable. <a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit1_Variables.py">source code</a>. </p>
-									<pre><code>
-class BankAccount():
-""" A class to hold account information"""
-									
-	def __init__(self, account_num, account_name, account_balance):
-	self.account_num = account_num  # Public
-	self._account_name = account_name  # Protected
-	self._account_balance = account_balance  # Private
-									
-									
-# Creating Objects
-Customer_1 = BankAccount("AE41221", "John", 90223)
-accn = Customer_1.account_num
-accname = Customer_1._account_name
-accb = Customer_1.__account_balance
-									
-									
-print(accn)
-print(accname)
-print(accb) # Error				
-									</code></pre>
-									<p><b>Results</b></p>
-									<pre><code>
-AE41221
-John
-AttributeError: 'BankAccount' object has no attribute '__account_balance'
-									</Code></pre>
-									<p>Public variables can be accessed from outside the class while accessing private classes will result in an error. However, Private Variables can still be accessed by a member function of the class. </p>
-									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+								
 									<hr />
 									<header class="major">
 										<h2>Unit 2</h2>

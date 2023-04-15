@@ -291,6 +291,23 @@ class PostCodeTester(unittest.TestCase):
 if __name__ == '__main__':
 	unittest.main()
 									</code></pre>
+									<P><b>
+										Results 
+									</b></P>
+									<pre><code>
+Ran 1 test in 0.018s
+
+FAILED (failures=1)
+Launching unittests with arguments python -m unittest test_postcodes.PostCodeTester.test_Unit4_Regex in F:\01_Documents\01_My_Academics\03_Essex University\03_04_NISM_SSD\04_Eportfolio\Codes
+
+
+
+True != False
+
+Expected :False
+Actual   :True
+
+									</code></pre>
 									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
@@ -301,111 +318,25 @@ if __name__ == '__main__':
 									<h2>Unit 6</h2>
 									</header>
 									<h3>Reflections & Terminologies </h3>
-									<p>During unit 6, Encapsulation was introduced. In concept, encapsulation is when class attributes and data structurer a grouped together and the access is restricted. This is when Public and Public attributes was practiced. Class attributes or class variables can be accessed from within the class using property decorator which I though is similar to abstract class decorators. However, I learned that they can be access using getters and setter’s functions. Another concept that was introduced in this unit is Data Validation. Data validation is the process of ensuring that the data type input is correct. At first, I found it difficult to make the connection between Encapsulation and Data validation. However, after practicing the below code, the syntax stared to make since.   </p>
-									<pre><code>
-@property
-def name(self):
-	return self._name
-@name.setter
-def name(self, new_name):
-	if type(new_name) != str:
-	raise TypeError("Names must be expressed as a string")
-	self._name = new_name
-									</code></pre>
-									<p>The above syntax represents 2 class methods with a property to decorator to restrict access to the attribute and setter to change the value. Validating in this case, is performed through an exception built-in function in python. This will ensure the correct data being inputted thus the data is validated.</p>
-									<h3><u>Artefacts</u></h3>
-									<p>Unit 6 also explores further implementation technics in OOP. Important terminologies such as an object state and class inheritance were introduced. It was practically challenging at the first glance. Class inheritance indicates the use of a Super class and Sub class. In other words, the main class or system feature will contain attributes and methods and then the sub class will inherent those attributes and methods. This technique encourages the reusability of the syntax and provides a blueprint for future use. An example of this is shown below by creating 3 abstract class methods and one subclass for banking operations. </p>
-									<pre><code>
-# Importing the abstract class module
-from abc import ABC, abstractmethod
-
-
-# creating the base class
-class BankOperations(ABC):
-
-	# creating abstract methods that will not be directly used
-	@abstractmethod
-	def current_balance(self):
-		raise NotImplementedError()  # for calculating and viewing balance
-
-	@abstractmethod
-	def transfer_money(self):
-		raise NotImplementedError  # to transfer money to another account
-
-	@abstractmethod
-	def deposit_money(self):
-		raise NotImplementedError  # to add money in account
-
-
-# Creating child class
-class Banking(BankOperations):
-
-	def __init__(self, my_balance=0):
-		self.my_balance = my_balance
-
-	# Class method to view current balance
-	def current_balance(self):
-		current_balance = self.my_balance
-		print("Your current balance is =", current_balance)
-		return
-
-	# Class method to view calculate money transfer
-	def transfer_money(self):
-		send_amount = (int(input("Enter amount: ")))
-		if self.my_balance <= send_amount:
-			print("Not enough balance in account")
-		else:
-			new_balance = self.my_balance - send_amount
-			self.my_balance = new_balance
-			print("Amount Sent!. New balance is", new_balance)
-
-	# Class method to view calculate money deposit
-	def deposit_money(self):
-		deposit_amount = (int(input("Enter deposit amount: ")))
-		new_deposit_amount = deposit_amount + self.my_balance
-		self.my_balance = new_deposit_amount
-		print("Deposit completed, new balance is", {self.my_balance})
-
-
-# Creating object with default balance of 1000
-bank_operator = Banking(1000)
-
-
-# Creating user menu interface
-def bank_app():
-	operation = int(input(""" Choose an operation:
-	1. Current Balance
-	2. Transfer Money
-	3. Deposit Money
-	4. Exit
-	Your input: """))
-
-	# object name is added as a parameter
-	if operation == 1:
-		Banking.current_balance(self=bank_operator)
-		bank_app()
-
-	elif operation == 2:
-		Banking.transfer_money(self=bank_operator)
-		bank_app()
-
-	elif operation == 3:
-		Banking.deposit_money(self=bank_operator)
-		bank_app()
-
-	elif operation == 4:
-		print("Thank you!")
-		exit()
-
-	else:
-		print("Wrong input!")
-
-
-bank_app()
-
-									</code></pre>
-									<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit6_abstract%20class.py">source code</a>.</p>
+									<p>
+										This unit was somehow and extension of the testing and debugging topics of the previous unit. I have continued to experiment with python built in testing libraries and linters that improves my code quality and structure. Since this week was the due date of our design document for the cyber security application, we have began testing out log-in and sign-up features of our software using these strategies. 
+									</p>
+									<h3>Team Notes</h3>
+									<p>
+										This week was the due date for the design proposal. We conducted a series of workshops over the weekend beforehand to reorganize the structure of the design document. We previously planned that Richard and Charles will be in charge of the required database integration methods as well as the UML diagrams meanwhile Elise and myself prepared the secure software design tools and methodologies. Finally, we collectively proof read each other’s parts to ensure the clarity of the design proposal. We have also conducted several tests on the login and sign-up prototype which had the OTP integration and made sure that it followed the same logic as the UML diagrams that are presented. 
+									</p>
+									<h3>Portfolio Component </h3>
+									<p>
+										The following code in stylelint.py file contained few errors that prevented it from running properly. In the view version, Indentation was added along with a print statement in order for the code be executed properly. 
+									</p>
+									<p>
+										After running the flake8 module on the original code, the missing indentation error was returned in which the white spaces was viewed. In this case all the errors are viewed and amended. 
+									</p>
 									<hr />
+
+
+
+									
 									<header class="major">
 										<h2>Unit 7</h2>
 									</header>

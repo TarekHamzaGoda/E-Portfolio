@@ -338,176 +338,71 @@ Actual   :True
 
 									
 									<header class="major">
-										<h2>Unit 7</h2>
-									</header>
-									<h3>Reflections & Evaluation(Driverless Car System Design) </h3>
-									<p>A as software engineer, am given the requirements to build a driverless car system. However, this part of the assignment requires me to only develop UML designs that showcases main software features and use cases during the pre-system implementation Phase. This assignment is considered as a great opportunity to apply the knowledge gained during previous units on UML design. First, A research was conducted on the main features of autonomous cars. which includes components such as environmental mapping, sensors and traffic recognition. As such, these components will be connected to the control unit that will interact with the driver. Several UML models were built based on the system requirement and level. 
-									The complete system design is <a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/02_Driverless_Car/Autonumus_SystemDesign.pdf">recorded here</a>.</p>
-									<h3><u>Artefacts</u></h3>
-									<h3>Nested Dictionaries</h3>
-									<p> OOP development are supported by data structures such as dictionaries. This exercise aims to create nested dictionary within the Class Car. Data types will be retrieved using class methods items (), keys (), and values (). The Car Class will contain a dictionary as a class attribute in which car types, makes and year will be stored. class methods will then return the data types. An object is instantiated to add the data set.
-										<a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit7_DataStructure.py">source code</a>.</p>
-									<pre><code>
-class Car:
-""" A class for all types of vehicles"""
-
-def __init__(self, car_type):
-	self.car_type = car_type
-
-def car_ignition(self):
-	print("car is started")
-
-def car_off(self):
-	print("car is off")
-
-
-class Lambo(Car):
-"""Class for one car type"""
-
-def __init__(self, lane, car_type, speed=0):
-	super().__init__(car_type)
-	self.lane = lane
-	self.speed = speed
-
-def accelerate(self):
-	print(self.speed + 10)
-
-def decrease_speed(self):
-	return self.speed - 10
-
-
-car_1 = Lambo(1, 'Lambo', 300)
-print(car_1.car_type)
-car_1.car_ignition()
-car_1.accelerate()
-car_1.decrease_speed()																
-									</code></pre>
-									<p><b>Results</b></p>
-									<pre><code>
-dict_keys(['Sedan', 'Hatchback'])
-dict_values([{'Toyota': 2013}, {'Volvo': 2014}])
-dict_items([('Sedan', {'Toyota': 2013}), ('Hatchback', {'Volvo': 2014})])
-									</code></pre>
-									<hr />
-									<header class="major">
-										<h2>Unit 8</h2>
-									</header>
-									<h3>Reflections Artefacts & Terminologies</h3>
-									<p>Unit 8’s theme was on understanding how data sets are compared in syntax using Union, Intersection, Difference and Symmetric. I think overall the elements in this unit will benefit me with producing an organized code structure and help understand types of data that will be include in syntax. To summarize, data set operations include the following:</p>
-									<ol>
-									<li><b>Union:</b> Items present in all sets</li>
-									<li><b>Intersection:</b> Items the are common between 2 sets</li>
-									<li><b>Difference:</b> Items that are only in 1 set</li>
-									<li><b>Symmetric Difference: </b>items that are not common between 2 sets.</li>
-									</ol>
-									<p>The code below demonstrates set operations between 2 data sets (Shopping basket)</p>
-
-									<pre><code>
-# Set operations on data ( shopping basket )
-
-basket_1 = {'apple', 'mango', 'salt', 'shampoo', 'rice', 'milk'}
-basket_2 = {'tissues', 'soup', 'gum', 'mango', 'pepper', 'rice', 'apple'}
-
-union = basket_1 & basket_2
-differance = basket_1 - basket_2
-intersection = basket_1 | basket_2
-symmetric_difference = basket_1 ^ basket_2
-
-print(union)
-print(differance)
-print(intersection)
-print(symmetric_difference)									
-									</code></pre>
-									<p><b>Results </b></p>
-									<pre><code>
-{'mango', 'apple', 'rice'}
-{'shampoo', 'milk', 'salt'}
-{'mango', 'shampoo', 'gum', 'soup', 'milk', 'pepper', 'apple', 'rice', 'tissues', 'salt'}
-{'shampoo', 'tissues', 'salt', 'gum', 'soup', 'pepper', 'milk'}
-									</code></pre>
-									<p><a href="https://github.com/TarekHamzaGoda/03_Module_3_OOP_Sep22/blob/main/01_Activities/Unit8_Datasets.py">source code</a>.</p></p>
-
-									<h3>Forum Discussion:  Metamodel Design to support OOD of the IoT</h3>
-									<p>Object-Oriented Programming (OOP) is a foundational aspect of software development. Therefore, Fortino et al. (2015) introduces a new approach that aims to apply similar fundamentals to the Internet of Things (IoT).  OOP initiatives require planning and design during early development stages. systematic software design strategies such as UML, helps provide a blueprint to support the development. Similarly, Metamodel is an approach that supports analysis and implementation techniques that aids with the development of Smart objects to the IoT (Fortino, et al., 2015).
-										Metamodel approaches can strongly support and identify smart object functions in different abstraction levels. Early development phases must require efforts to understand main system design, relationships, and functional components. As such, metamodel approaches can provide abstract testing grounds for features in different phases of the system. 
-										Although system design planning approaches such as UML or Metamodel are supplemental factors of system development, it remains a challenge to include actual syntax within both approaches. That is because code components, functions, behaviours and algorithms are subject for constant change due to numerous factors during system implementation (Perez & Sellers 2008). A metamodel in concept provides a generalized approach of the system design. The inclusion of further implementation strategies can be time consuming and maybe inefficient. 
-									</p>
-									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
-									<hr />
-									<header class="major">
-										<h2>Unit 9</h2>
+									<h2>Unit 7</h2>
 									</header>
 									<h3>Reflections & Terminologies</h3>
-									<p>Unit 9 elaborates on testing approaches and consistent debugging and how testing is considered a vital practice in system development. I think that testing methodologies should be invested on as it necessary for the long-term system development. This unit introduces different types of testing approaches such as manual testing, automated testing and black box testing. The purpose of this is to insure reliable software development process.</p>
-									<h3><u>Artefacts</u></h3>
-									<h3>Cyclomatic Complexity</h3>
-									<p>CC or cyclomatic complexity is unit that defines the possible number of paths inside a code and calculated using McCabe’s Formula:</p>
-									<p><b>Complexity = Graph edges – Graph Nodes + 2(Connected Components)</b></p>
-									<pre><code>
-M = E – N + 2P
-									</code></pre>
-									<p>A Code can be translated into graphs in order to calculate its complexity. This exercise will be applied on the following code.</p>
-									<pre><code>
-public static string IntroducePerson(string name, int age)
-{
-	var response = $"Hi! My name is {name} and I'm {age} years old.";
+									<p>
+										During this week, I explored the history and development of a typical operating systems and how an OS acts as the intermediary between computer hardware and software applications. It was also interesting to understand the common types of operating systems that are general-purposed and specific specialized environments. Furthermore, I have learned about the common measures to ensure the security of an operating system that includes limiting user preferences, use of strong authentication and monitoring the system. 	
+									</p>
+									<h3>Team Notes</h3>
+									<p>
+										This week’s meeting was challenging as we discussed the main framework where the web application would be built on. During our workshop we went through the blueprints for both Django and Flask. Since most of the team members were not familiar with Django framework, we have decided that Flask will the main farmwork as it is easy to understand and is prone to fewer errors and bugs. We have decided that I will be tasked with building the main interface, setting up the main HTML pages, CSS, Jscript as well as the client and server connections. Meanwhile Elsie will be responsible for creating the syntax for the log-in and sign-up module which will later be integrated with the main flask application. Richard and Charles will be tasked with building databases on MySQL and setting the connection protocol to the backend on my side. 
+									</p>
+									<h3>Portfolio Component</h3>
+									<p>
+										In computer Science, Ontology is referred to as an explicit specification of an abstract model. In ____’s article, an Ontology Web Service language for example, aims to provide a catalogue for the development phase or any type of implementation technology that can assist an organization with getting up to speed with the right technology. However, OWS is an Ontology that is specific for the web domain. In other words, an Ontology of web services for instance, can be described as a formal knowledge or a set of concepts that provides the building blocks of Semantic Web Technology. 
+									</p>
+									<h3>Artefacts</h3>
+									<p>
+										A command shell that implements the following commands will be created with python. Please review the code here.
+									</p>
+									<p>
+										<li>
+											“LIST” : lists all the files in the same directory. 
+										</li>
+										<li>
+											“ADD” : adds two digits.
+										</li>
+										<li>
+											“HELP”: preview all commands.
+										</li>
+										<li>
+											“EXIT” : Exits the command shell.
+										</li>
+									</p>
+									<hr />
 
-	if (age >= 18)
-		response += " I'm an adult.";
 
-	if (name.Length > 7)
-		response += " I have a long name.";
 
-	return response;
-}
 
-									</code></pre>
-									<pre><code>
-Assignment > if > Concatenation > if > Concatenation>Return
-Nodes = 6
-Egdges = 5
-M =  6 – 5 + 2(1)
-Cyclomatic Complexity = 3 
-									</code></pre>
-									<p>Often engineers strive for low CC results (Schults, 2021). The complexity of the code can make it difficult to read and can contribute to maintenance issues during the development cycle.</p>
-									<P><b><i>All references are recorded in <a href="generic_u12.html">unit 12</a>. </i></b></P>
+									<header class="major">
+									<h2>Unit 8</h2>
+									</header>
+									<h3>Reflections Artefacts & Terminologies</h3>
+									<p>
+										Cryptography was one of the most challenging topics to grasp. However, during this unit, I was able to understand by practicing encryption techniques first hand during the base69 algorithm codio session. I also explored several python modules that encodes and decodes inputted user data using the cryptography.fernet and testing the output of the encrypted text. Since I mostly understand the process of encryption using this function, we are planning to use this technique in our web application to encrypt the user data before sending it to the database. 
+									</p>
+									<h3>Discussion 2</h3>
+									<h3>Artefacts</h3>
+									<p>
+										A simple encryption program is created using a the fernet algorithm module. The user will input a text to that will be encrypted then decrypted in the terminal window. The functions will use the encode_text() and decode_text()  objects provided by fernet. Please review the code here. 
+									</p>
+									<hr />
+
+
+
+
+									<header class="major">
+									<h2>Unit 9</h2>
+									</header>
+									<h3>Team Notes</h3>
+									<p>
+										As we approach the deadline, we setup a series of mini workshops to begin testing our code. First, I had to present the logic behind the HTML that was created to familiarize the team members with the Jinga syntax that connects the html with the python code. Second, we have discussed the front end of the web application, how the users will access the login-page and view the current vulnerabilities pages. This workshop also aims to ensure that all team members have the required Flask packages installed on their system and that the main.py file is connected to Richard’s and Charles databases. 
+									</p>
+
 								</div>
 							</section>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic_u9.html" class="image">
-										<img src="images/u10bug.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Unit 10</h3>
-											</header>
-											<p>Reflections & Artefacts</p>
-											<ul class="actions">
-												<li><a href="generic_u10.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/u11l.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Unit 11</h3>
-											</header>
-											<p>Reflections & Artefacts</p>
-											<ul class="actions">
-												<li><a href="generic_u11.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
 								<section>
 									<a href="generic.html" class="image">
 										<img src="images/u12l.jpg" alt="" data-position="25% 25%" />

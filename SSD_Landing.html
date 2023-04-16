@@ -389,7 +389,10 @@ return n*factorial(n-1)
 									<p>
 										In computer Science, Ontology is referred to as an explicit specification of an abstract model. According to (Gaitanou, 2009), an Ontology Web Service language for example, aims to provide a catalogue for the development phase or any type of implementation technology that can assist an organization with getting up to speed with the right technology. However, OWS is an Ontology that is specific for the web domain. In other words, an Ontology of web services for instance, can be described as a formal knowledge or a set of concepts that provides the building blocks of Semantic Web Technology. 
 									</p>
-									<span class="image main"><img src="images/D1SD.PNG" alt="" /></span>
+									<p>
+										An example ontology relevant to this module’s Vulnerabilities Tracking Web App is provided below. 
+									</p>
+									<span class="image main"><img src="images/O1.PNG" alt="" /></span>
 									<h3>Artefacts: CLI With Python</h3>
 									<p>
 										A command shell that implements the following commands will be created with python. Please review the code here.
@@ -417,43 +420,33 @@ return n*factorial(n-1)
 									<header class="major">
 									<h2>Unit 8</h2>
 									</header>
-									<h3>Reflections Artefacts & Terminologies</h3>
+									<h3>Learning Outcomes: Encryption</h3>
 									<p>
 										Cryptography was one of the most challenging topics to grasp. However, during this unit, I was able to understand by practicing encryption techniques first hand during the base69 algorithm codio session. I also explored several python modules that encodes and decodes inputted user data using the cryptography.fernet and testing the output of the encrypted text. Since I mostly understand the process of encryption using this function, we are planning to use this technique in our web application to encrypt the user data before sending it to the database. 
 									</p>
-									<h3>Discussion 2</h3>
-									<h3>Artefacts</h3>
+									<h3>Discussion 2: Cryptography</h3>
+									<p>
+										TrueCrypt is an open-source encryption tool that was available for operating systems such as windows, Mac and Linux. TrueCrypt provided its users with real-time encryption of data by creating a virtual disk and viewing random data until it is decrypted. In 2014, TrueCrypt was discounted and father maintenance operations were ceased (Roach, 2022).  
+									</p>
+									<p>
+										During the same year, a cryptanalysis conducted on TrueCrypt by Junestam & Guigo (2014) revealed several vulnerabilities, some which are considered high in severity. However, the findings suggest no evidence of intentional malicious code and is rather prone to bugs. From my point of view, I disagree with the authors statement as most of the vulnerabilities that are discovered can be addressed if the code is maintained.  On the other hand, the two main potential weaknesses as revealed by the audit presents a huge factor in determining the software’s reliability: 
+									</p>
+									<p>
+										Volume Header key derivation algorithm:  Weak validation of driver letter symbols. TrueCrypt uses the minimum iteration count using the current algorithm in which brute force attack can be performed. 
+									</p>
+									<p>
+										Sensitive information might be paged out from kernel stacks: A memory overflow can result in stacked data to be paged out to the hard disk. Therefore, allowing the attacker to access non-encrypted confidential data (Baluda, et al., 2015). 
+									</p>
+									<p>
+										In my opinion, I would not recommend TrueCrypt as an encryption solution to a friend because of the lack of maintainability. All initiatives to fix current vulnerabilities in TrueCrypt are stopped, especially after the publishing of the weakness. Newer encryption tools such as VeraCrypt that provides modern security solutions is still maintained.  
+									</p>
+									<span class="image main"><img src="images/O1.PNG" alt="" /></span>
+									<h3>Artefacts: Cryptography With fernet</h3>
 									<p>
 										A simple encryption program is created using a the fernet algorithm module. The user will input a text to that will be encrypted then decrypted in the terminal window. The functions will use the encode_text() and decode_text()  objects provided by fernet. Please review the code here. 
-									</p>
+									</p><a href="https://github.com/TarekHamzaGoda/04_Module_4_SSD_Jan23/blob/main/01_Activities/u8_crypto.py">source code</a>
 									<hr />
 
-
-
-
-									<header class="major">
-									<h2>Unit 9</h2>
-									</header>
-									<h3>Team Notes</h3>
-									<p>
-										As we approach the deadline, we setup a series of mini workshops to begin testing our code. First, I had to present the logic behind the HTML that was created to familiarize the team members with the Jinga syntax that connects the html with the python code. Second, we have discussed the front end of the web application, how the users will access the login-page and view the current vulnerabilities pages. This workshop also aims to ensure that all team members have the required Flask packages installed on their system and that the main.py file is connected to Richard’s and Charles databases. 
-									</p>
-
-
-
-									<header class="major">
-									<h2>Unit 8</h2>
-									</header>
-									<h3>Reflections & Terminologies</h3>
-									<p>
-										Cryptography was one of the most challenging topics to grasp. However, during this unit, I was able to understand by practicing encryption techniques first hand during the base69 algorithm codio session. I also explored several python modules that encodes and decodes inputted user data using the cryptography.fernet and testing the output of the encrypted text. Since I mostly understand the process of encryption using this function, we are planning to use this technique in our web application to encrypt the user data before sending it to the database. 
-									</p>
-									<h3>Discussion 2</h3>
-									<h3>Artefacts</h3>
-									<p>
-										A simple encryption program is created using a the fernet algorithm module. The user will input a text to that will be encrypted then decrypted in the terminal window. The functions will use the encode_text() and decode_text()  objects provided by fernet. Please review the code here. 
-									</p>
-									<hr />
 
 
 

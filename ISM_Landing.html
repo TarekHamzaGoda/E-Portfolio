@@ -170,6 +170,7 @@
 									<li>
 										Consider engaging a third-party auditor to assess HIPAA compliance and provide recommendations.</li>
 									</p>
+									<h3>Assignment 1: Pampered Pets Risk Analysis</h3>
 
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
@@ -180,70 +181,71 @@
 									<header class="major">
 									<h2>Unit 4</h2>
 									</header>
-									<h3>Learning Outcomes: Regular Expressions</h3>
+									<h3>Learning Outcomes: Cybersecurity frameworks</h3>
 									<p>
-										In unit 4, I was keen to understand the usage of regular expressions (Regex) and how it is a powerful tool that is used in text processing and identifying patterns. Regex can be particularly useful in providing a secure approach for validating input that can be greatly beneficial to our application implementation phase. On the other hand, I have learned that “evil regex” is referred overly complex regex patterns that can have unintended consequences such as the increase of the process time due to excessive backtracking. We are planning to use regex in our sign-up pages and building a pattern for each input category such as the email and submission ID. 
+										This unit provides comprehensive insights into cybersecurity frameworks, their core components, and the methodologies for their implementation. My eager dive into the steps of establishing security frameworks like NIST and ISO 27001.
+										As I previously wondered about the necessary steps to take in the event of a security breach, I finally discover that this unit introduces disaster recovery plans, offering clarity on critical concepts such as recovery time objectives (RTO) and recovery point objectives (RPO). Additionally, it introduced me to the concepts of hot, warm, and cold standbys, recommended backup sites, and tailored best practices aligned with an organization's unique needs.
 									</p>
-									<h3>Team Notes: Week 4</h3>
+
+									<h3>Collaborative Wiki Development: Security Framworks</h3>
+
+									<p>According to the articles by Barafort et al (2018) and the blog by Kirvan (2021), the applicable standerds for each of these entites are illustrated below:</p>
+									<p><b> Internation Bank</b></p>
+									<p><ul> Standards </ul></p>
 									<p>
-										Now that we are closer to the deadline, we have decided to setup a session to review each other’s system components and research materials. We also conducted few debates concerning the secure software features and GDPR clauses to be used. Meanwhile, we had to test several modules such as the login and signup features to help us understand and construct our UML diagrams. 
+										<li>
+											NIST SP 800-53: a highly relevant framework for international banks due to its comprehensive approach to security controls and risk management. Banks handle sensitive financial information, making security a top priority. Compliance with NIST SP 800-53 helps ensure the protection of customer data and financial transactions.
+										</li>
+										<li>
+											GDPR: If the bank operates within or deals with EU citizens' data, GDPR compliance becomes essential to protect customer privacy and avoid fines.
+										</li>
 									</p>
-									<h3>Portfolio Component: Regex</h3>
-									<p><b>
-										What is ReDOS and what part do ‘Evil Regex’ play?
-									</b></p>
+									<p><ul> Tests & Recommendations </ul></p>
 									<p>
-										ReDoS stands for "Regular Expression Denial of Service," which refers to a type of cyber-attack that exploits the vulnerability of certain regular expressions to cause a denial of service (DoS) condition in the target application. Regular expressions are patterns used to match and manipulate strings, and they are commonly used in programming.
+										<li>
+											NIST SP 800-53: Conduct a security assessment to identify gaps against controls. 
+										</li>
+										<li>
+											GDPR: Conduct a compliance assessment that focuses on data protection protocols. It is recommended that a to appoint a Data protection officer if required. Additionally, ensuring data breach notifications capabilities are in place. 
+										</li>
 									</p>
+									<p><b> Large Hospital</b></p>
+									<p><ul> Standards </ul></p>
 									<p>
-										"Evil Regex" is a term used to describe malicious or intentionally crafted regular expressions that are designed to trigger the ReDoS vulnerability in regex engines. These malicious regular expressions are carefully crafted with certain patterns or combinations of characters that exploit the way the regex engine processes input, causing it to exhibit poor performance and take an excessive amount of time to complete the matching process.
+										<li>
+											NIST CSF: NIST CSF Provides a risk-based approach to cybersecurity. Hospitals deal with confidential patient information, making this framework applicable for ensuring data protection compliance.										</li>
+										<li>
+											HITRUST Common Security Framework: specifically designed for healthcare organizations, HITRUST addresses the complex regulatory requirements in healthcare and is a suitable choice for large hospitals.										</li>
 									</p>
-									<p><b>
-										What are the common problems associated with the use of regex? How can these be mitigated?
-									</b></p>
+									<p><ul> Tests & Recommendations </ul></p>
 									<p>
-										Performance and Efficiency: Some regex patterns can be inefficient and result in poor performance, especially when dealing with large input data or complex patterns. s, it's important to use optimized and efficient regex patterns. Avoid using overly complex or redundant patterns, and consider techniques such as pattern simplification, character class optimization, and quantifier optimization to optimize regex performance.
+										<li>
+											NIST CSF: Perform a cybersecurity maturity assessment using the NIST CSF framework. It is recommended to enhance threat detection and incident response capabilities.										</li>
+										<li>
+											HITRUST Common Security Framework: Conduct regular security assessments and penetration tests. 
+										</li>
 									</p>
+									<p><b> Large Food Manufacturing Factory</b></p>
+									<p><ul> Standards </ul></p>
 									<p>
-										Security Risks: Regular expressions can potentially introduce security risks, such as ReDoS attacks, as mentioned in the previous answer. Malicious or poorly crafted regex patterns can be exploited to cause denial of service, information disclosure, or other security vulnerabilities in the target application. To mitigate security risks associated with regex, it's important to validate and sanitize any input that is used in regex patterns, and carefully review and test regex patterns for potential vulnerabilities, such as ReDoS.
+										<li>
+											NIST SP 800-171: This system is intended to safeguard controlled unclassified information (CUI) and is frequently expected for associations working with the U.S. government or its contractors. In this case some food manufacturing entities may need to comply with this framework due to government contracts.									
+										<li>
+											CIS Controls: The CIS Controls offer a practical approach to cybersecurity and can help protect against common threats that manufacturing facilities might face.
+										</li>
 									</p>
-									<P><b>
-										How and why could regex be used as part of a security solution?
-									</b></P>
+									<p><ul> Tests & Recommendations </ul></p>
 									<p>
-										Input Validation: Regex can be used to validate and sanitize input data to ensure that it meets the expected format or pattern, which can help prevent injection attacks, such as SQL injection, cross-site scripting (XSS), or other types of code injection attacks.
+										<li>
+											NIST SP 800-171: If the factory handles government contracts, it is recommended to conduct a compliance assessment against the framework controls. It is also recommended to check against security controls, such as data encryption and access controls. Train employees on security awareness and incident response protocols. 
+										</li>
+										<li>
+										CIS Controls: Assess the execution of CIS Controls to secure manufacturing systems. Reinforce security controls for network and system configurations. It is recommended to consistently conduct security awareness training for factory employees.
+										</li>
 									</p>
-									<h3>Artefacts: UK postcode, Regex</h3>
-									<p>
-										UK post codes consists of two parts, an “outcode” and an “incode”. Each consists of two – four characters followed by a space, then another three characters. A regex pattern can be extracted from a post code if we comply with a basic rule. An outcode consists of 1-2 letters followed by a character that is aways numeric, followed by and optional letter or number. Example (AA1A / A1A/ AA11 etc). An incode is separated by a single or multiple space, followed by a numeric character, followed by 2 letters. This regex pattern also limits the length of the input to match the UK post code format, thus protecting for ReDos. Check the code below. 
-									</p>
-									<pre><code>
-import re
-
-
-def validate_uk_postcode(user_input):
-	"""A function to validate user post codes inputs using regex match function"""
-
-	return bool(re.match(r"^(((([A-Z][A-Z]{0,1})[0-9][A-Z0-9]{0,1}) {0,}[0-9])[A-Z]{2})$", user_input))
-
-
-test_codes = ["M1 1AA", "M60 1NW", "CR2 6XH", "DN55 1PT", "W1A 1HQ", "EC1A 1BB", "12312asda"]
-
-
-for user_input in test_codes:
-	print(validate_uk_postcode(user_input))
-									</code></pre>
-									<h3>Results</h3>
-									<pre><code>
-	True
-	True
-	True
-	True
-	True
-	True
-	False
-
-									</code></pre>
+									
+									
+									
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 

@@ -191,7 +191,7 @@
 
 									<p>According to the articles by Barafort et al (2018) and the blog by Kirvan (2021), the applicable standerds for each of these entites are illustrated below:</p>
 									<p><b> Internation Bank</b></p>
-									<p><ul> Standards </ul></p>
+									<p><u> Standards </u></p>
 									<p>
 										<li>
 											NIST SP 800-53: a highly relevant framework for international banks due to its comprehensive approach to security controls and risk management. Banks handle sensitive financial information, making security a top priority. Compliance with NIST SP 800-53 helps ensure the protection of customer data and financial transactions.
@@ -200,7 +200,7 @@
 											GDPR: If the bank operates within or deals with EU citizens' data, GDPR compliance becomes essential to protect customer privacy and avoid fines.
 										</li>
 									</p>
-									<p><ul> Tests & Recommendations </ul></p>
+									<p><u> Tests & Recommendations </u></p>
 									<p>
 										<li>
 											NIST SP 800-53: Conduct a security assessment to identify gaps against controls. 
@@ -210,14 +210,14 @@
 										</li>
 									</p>
 									<p><b> Large Hospital</b></p>
-									<p><ul> Standards </ul></p>
+									<p><u> Standards </u></p>
 									<p>
 										<li>
 											NIST CSF: NIST CSF Provides a risk-based approach to cybersecurity. Hospitals deal with confidential patient information, making this framework applicable for ensuring data protection compliance.										</li>
 										<li>
 											HITRUST Common Security Framework: specifically designed for healthcare organizations, HITRUST addresses the complex regulatory requirements in healthcare and is a suitable choice for large hospitals.										</li>
 									</p>
-									<p><ul> Tests & Recommendations </ul></p>
+									<p><u> Tests & Recommendations </u></p>
 									<p>
 										<li>
 											NIST CSF: Perform a cybersecurity maturity assessment using the NIST CSF framework. It is recommended to enhance threat detection and incident response capabilities.										</li>
@@ -226,7 +226,7 @@
 										</li>
 									</p>
 									<p><b> Large Food Manufacturing Factory</b></p>
-									<p><ul> Standards </ul></p>
+									<p><u> Standards </u></p>
 									<p>
 										<li>
 											NIST SP 800-171: This system is intended to safeguard controlled unclassified information (CUI) and is frequently expected for associations working with the U.S. government or its contractors. In this case some food manufacturing entities may need to comply with this framework due to government contracts.									
@@ -234,7 +234,7 @@
 											CIS Controls: The CIS Controls offer a practical approach to cybersecurity and can help protect against common threats that manufacturing facilities might face.
 										</li>
 									</p>
-									<p><ul> Tests & Recommendations </ul></p>
+									<p><u> Tests & Recommendations </u></p>
 									<p>
 										<li>
 											NIST SP 800-171: If the factory handles government contracts, it is recommended to conduct a compliance assessment against the framework controls. It is also recommended to check against security controls, such as data encryption and access controls. Train employees on security awareness and incident response protocols. 
@@ -244,6 +244,31 @@
 										</li>
 									</p>
 									
+									<h3>Seminar Preparation: Disaster Recovery (DR)</h3>
+									<p><b> Activity 1: DR Definitions </b></p>
+									<p>
+										Hot, Warm, and cold standby are approaches and strategies to disaster discovery. Each vary in levels associated with cost, Recovery Time Objective (RTO), Recovery Point Objective (RPO), and availability. The differences will be previewed in the table below. The choice between hot, warm, and cold standby strategies depends on an organization's requirements for availability, data loss tolerance.
+									</p>
+									<span class="image main"><img src="images/o11.png" alt="" /></span>
+									<p>
+										The technology applied plays a crucial role for creating a hot standby solution between two on-premise data centers. The choice depends on the infrastructure and network connectivity available based on the feasibility and effectiveness of the solution. Below are some factors to consider for Hot standby solutions:
+									</p>
+									<p>
+										<li>
+											Network Redundancy: high availability requires robust failover capabilities such as network links and switches to ensure seamless communication between data canters. 
+										</li>
+										<li>
+											Load Balancing: Such solution requires the traffic from user to be distributed in order to maintain high availability. 
+										</li>
+										<li>
+											Monitoring and Alerting: Comprehensive monitoring solutions can proactively detect issues in order to trigger necessary failover processes. 
+										</li>
+									</p>
+									<p><b> Activity 2: DR Definitions </b></p>
+
+
+									<p><b> Activity 2: DR Definitions </b></p>
+									<span class="image main"><img src="images/o11.png" alt="" /></span>
 									
 									
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
@@ -255,70 +280,12 @@
 									<header class="major">
 									<h2>Unit 5</h2>
 									</header>
-									<h3>Learning Outcomes: Testing </h3>
+									<h3>Learning Outcomes: Future Trends </h3>
 									<p>
-										This unit explores the various testing modules offered by python such as pylint, unitest and flack8. I think this unit provides a clear approach on the testing strategies, especially during the codio exercise. I have learned how to import the testing scripts to my main file and incorporate testing models for each of my code block that presents different system features. 		
+										This week’s unit reflects mainly on the future trends of risk assessment and mitigations. I was particularly interested in the use of ML or Adversarial ML systems on detecting potential threats. In addition, I was keen to learn the information the lecture cast has provided on topics related to DevOps, Enterprise Risk Management and Real Options Theory. In my opinion, this unit combines business, economic and technological aspects and challenges of risk management within an organization. 	
 									</p>
-									<h3>Team Notes: Week 5</h3>
-									<p>
-										During this meeting, the following work in progress topics were discussed:
-									</p>
-									<P>
-										<li>
-											Framework to build the web application. We debated wither Django, Flask or Bottle is the best framework to integrate system features and the SQL database. We also researched tutorial to help us build the syntax in order to lunch the application.
-										</li>
-										<li>
-											Secure Software development. We tried to source external libraries that can assist us in building the OTP and encryption features.
-										</li>
-										<li>
-											SQL database management tools. Tested out few tables on SQLite, MySQL and SQL server. 
-										</li>
-									</P>
-									<p>
-										The above points assisted us with identifying the required tools to build our application. That is because our design proposal will cover the processes and frameworks needed to execute the web app. 
-									</p>
-									<h3>Portfolio Component: Cyclomatic Complexity</h3>
-									<p>
-										Cyclomatic Complexity in my opinion is still reelevated when it comes to developing a secure software. Cyclomatic Complexity is a quantitative measure of the complexity of a software program's control flow, and it can be used as an indicator of the potential risk and maintainability of the code. Higher CC values can indicate the likelihood od in introducing security vulnerabilities. Although CC is just one of many factors to consider in developing a secure software, it provides an overall matric of the level complexity of the code in which few initiatives can be taken to refactor the code and the value of test cases. 
-									</p>
-									<h3>Artefacts: Testing</h3>
-									<p>
-										The unit test module in python is imported to conduct a test case on our previous regex syntax that validates the UK post codes. In the previous code, the built-in test in a from of a “for loop” was added to validate the user input. For the unit test to succeed, the built-in tester will be removed. A class will be created to test the validation function in the post code checker file. Several assert functions will evaluate if the post code is True. See the code below: 
-									</p>
-									<pre><code>
-import unittest
-import Unit4_Regex
+									
 
-
-class PostCodeTester(unittest.TestCase):
-
-	def test_Unit4_Regex(self):
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("M1 1AA"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("M60 1NW"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("CR2 6XH"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("23123123s"), True)
-
-
-if __name__ == '__main__':
-	unittest.main()
-									</code></pre>
-									<P><b>
-										Results 
-									</b></P>
-									<pre><code>
-Ran 1 test in 0.018s
-
-FAILED (failures=1)
-Launching unittests with arguments python -m unittest test_postcodes.PostCodeTester.test_Unit4_Regex in F:\01_Documents\01_My_Academics\03_Essex University\03_04_NISM_SSD\04_Eportfolio\Codes
-
-
-
-True != False
-
-Expected :False
-Actual   :True
-
-									</code></pre>
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
@@ -328,148 +295,12 @@ Actual   :True
 									<header class="major">
 									<h2>Unit 6</h2>
 									</header>
-									<h3>Learthing Outcomes: Testing libraries</h3>
-									<p>
-										This unit was somehow and extension of the testing and debugging topics of the previous unit. I have continued to experiment with python built in testing libraries and linters that improves my code quality and structure. Since this week was the due date of our design document for the cyber security application, we have began testing out log-in and sign-up features of our software using these strategies. 
-									</p>
-									<h3>Team Notes: week 6</h3>
-									<p>
-										This week was the due date for the design proposal. We conducted a series of workshops over the weekend beforehand to reorganize the structure of the design document. We previously planned that Richard and Charles will be in charge of the required database integration methods as well as the UML diagrams meanwhile Elise and myself prepared the secure software design tools and methodologies. Finally, we collectively proof read each other’s parts to ensure the clarity of the design proposal. We have also conducted several tests on the login and sign-up prototype which had the OTP integration and made sure that it followed the same logic as the UML diagrams that are presented. 
-									</p>
-									<h3>Portfolio Component: Codio exercise </h3>
-									<p>
-										The following code in stylelint.py file contained few errors that prevented it from running properly. In the view version, Indentation was added along with a print statement in order for the code be executed properly. 
-									</p>
-									<pre><code>
+									<h3>ISM Final Module Reflection</h3>
+									<h3>Assignment Part 2: The Attack Tree Generator</h3>
 
 
-
-def factorial(n):
-""" Return factorial of n """
-if n == 0:
-return 1
-else:
-return n*factorial(n-1)
-									</code></pre>
-									<p>
-										After running the flake8 module on the original code, the missing indentation error was returned in which the white spaces was viewed. In this case all the errors are viewed and amended. 
-									</p>
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
-
-
-
-									
-									<header class="major">
-									<h2>Unit 7</h2>
-									</header>
-									<h3>Learing Outcomes: Operating Systems</h3>
-									<p>
-										During this week, I explored the history and development of a typical operating systems and how an OS acts as the intermediary between computer hardware and software applications. It was also interesting to understand the common types of operating systems that are general-purposed and specific specialized environments. Furthermore, I have learned about the common measures to ensure the security of an operating system that includes limiting user preferences, use of strong authentication and monitoring the system. 	
-									</p>
-									<h3>Team Notes: week 7</h3>
-									<p>
-										This week’s meeting was challenging as we discussed the main framework where the web application would be built on. During our workshop we went through the blueprints for both Django and Flask. Since most of the team members were not familiar with Django framework, we have decided that Flask will the main farmwork as it is easy to understand and is prone to fewer errors and bugs. We have decided that I will be tasked with building the main interface, setting up the main HTML pages, CSS, Jscript as well as the client and server connections. Meanwhile Elsie will be responsible for creating the syntax for the log-in and sign-up module which will later be integrated with the main flask application. Richard and Charles will be tasked with building databases on MySQL and setting the connection protocol to the backend on my side. 
-									</p>
-									<h3>Portfolio Component: Ontology</h3>
-									<p>
-										In computer Science, Ontology is referred to as an explicit specification of an abstract model. According to (Gaitanou, 2009), an Ontology Web Service language for example, aims to provide a catalogue for the development phase or any type of implementation technology that can assist an organization with getting up to speed with the right technology. However, OWS is an Ontology that is specific for the web domain. In other words, an Ontology of web services for instance, can be described as a formal knowledge or a set of concepts that provides the building blocks of Semantic Web Technology. 
-									</p>
-									<p>
-										An example ontology relevant to this module’s Vulnerabilities Tracking Web App is provided below. 
-									</p>
-									<span class="image main"><img src="images/o11.png" alt="" /></span>
-									<h3>Artefacts: CLI With Python</h3>
-									<p>
-										A command shell that implements the following commands will be created with python. Please review the code here.
-										<a href="https://github.com/TarekHamzaGoda/04_Module_4_SSD_Jan23/blob/main/01_Activities/u7_cli.py">source code</a>.</p>
-									</p>
-									<p>
-										<li>
-											“LIST” : lists all the files in the same directory. 
-										</li>
-										<li>
-											“ADD” : adds two digits.
-										</li>
-										<li>
-											“HELP”: preview all commands.
-										</li>
-										<li>
-											“EXIT” : Exits the command shell.
-										</li>
-									</p>
-									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
-									<hr />
-
-
-
-
-									<header class="major">
-									<h2>Unit 8</h2>
-									</header>
-									<h3>Learning Outcomes: Encryption</h3>
-									<p>
-										Cryptography was one of the most challenging topics to grasp. However, during this unit, I was able to understand by practicing encryption techniques first hand during the base69 algorithm codio session. I also explored several python modules that encodes and decodes inputted user data using the cryptography.fernet and testing the output of the encrypted text. Since I mostly understand the process of encryption using this function, we are planning to use this technique in our web application to encrypt the user data before sending it to the database. 
-									</p>
-									<h3>Discussion 2: Cryptography</h3>
-									<p>
-										TrueCrypt is an open-source encryption tool that was available for operating systems such as windows, Mac and Linux. TrueCrypt provided its users with real-time encryption of data by creating a virtual disk and viewing random data until it is decrypted. In 2014, TrueCrypt was discounted and father maintenance operations were ceased (Roach, 2022).  
-									</p>
-									<p>
-										During the same year, a cryptanalysis conducted on TrueCrypt by Junestam & Guigo (2014) revealed several vulnerabilities, some which are considered high in severity. However, the findings suggest no evidence of intentional malicious code and is rather prone to bugs. From my point of view, I disagree with the authors statement as most of the vulnerabilities that are discovered can be addressed if the code is maintained.  On the other hand, the two main potential weaknesses as revealed by the audit presents a huge factor in determining the software’s reliability: 
-									</p>
-									<p>
-										Volume Header key derivation algorithm:  Weak validation of driver letter symbols. TrueCrypt uses the minimum iteration count using the current algorithm in which brute force attack can be performed. 
-									</p>
-									<p>
-										Sensitive information might be paged out from kernel stacks: A memory overflow can result in stacked data to be paged out to the hard disk. Therefore, allowing the attacker to access non-encrypted confidential data (Baluda, et al., 2015). 
-									</p>
-									<p>
-										In my opinion, I would not recommend TrueCrypt as an encryption solution to a friend because of the lack of maintainability. All initiatives to fix current vulnerabilities in TrueCrypt are stopped, especially after the publishing of the weakness. Newer encryption tools such as VeraCrypt that provides modern security solutions is still maintained.  
-									</p>
-									<p>
-										An ontology capturing TrueCrypt's weakness is presented below:
-									</p>
-									<span class="image main"><img src="images/O2.png" alt="" /></span>
-									<h3>Artefacts: Cryptography With fernet</h3>
-									<p>
-										A simple encryption program is created using a the fernet algorithm module. The user will input a text to that will be encrypted then decrypted in the terminal window. The functions will use the encode_text() and decode_text()  objects provided by fernet. Please review the code here. 
-										<a href="https://github.com/TarekHamzaGoda/04_Module_4_SSD_Jan23/blob/main/01_Activities/u8_crypto.py">source code</a>
-									</p>
-									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
-									<hr />
-
-
-
-
-
-									<header class="major">
-									<h2>Unit 9</h2>
-									</header>
-									<h3>Team Notes: Week 9</h3>
-									<p>
-										As we approach the deadline, we setup a series of mini workshops to begin testing our code. First, I had to present the logic behind the HTML that was created to familiarize the team members with the Jinga syntax that connects the html with the python code. Second, we have discussed the front end of the web application, how the users will access the login-page and view the current vulnerabilities pages. This workshop also aims to ensure that all team members have the required Flask packages installed on their system and that the main.py file is connected to Richard’s and Charles databases. 
-									</p>
-									</hr>
-
-
-
-
-									<header class="major">
-									<h2>Unit 10</h2>
-									</header>
-									<h3>Team Notes: Week 10</h3>
-									<p>
-										We have conducted many meetings during this week mainly to ensure that Elise’s login and sign-up features are working. We had to test if the user input is recorded, encrypted and sent to the database. There were other challenges that we faced trying to integrate the pyOTP module and the QR code generation to authenticate the user. We tried to work on the popup window that generates the QR code and OTP for authenticating the user. On the other hand, Richard was working to connect his database of current vulnerabilities to the HTML webpage while Charles worked on the admin page that contained the system log information and the registered users tables. We aim to constantly update and debug the main.py file with the new code blocks from each team member. 
-									</p>
-									<h3>Portfolio Component: Facated Data </h3>
-									<p>
-										According to Schmitz et al (2016), public and private are two types of faceted data. Failing to ensure secure flow of information may result in a data leakage in both data types. Therefore, faceted values that are assigned to data types protects unauthorised viewers from observing it. Thus, I think it is good practice to protect systems from data leakage, specifically private data. Although this approached contributes to the increased complexity of the code, Schmitz et al (2016) introduces the process of integrating faceted language as a library rather than modifying the actual code. 
-									</p>
-									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
-
-
-
 
 								</div>
 							</section>

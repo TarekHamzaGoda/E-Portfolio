@@ -171,6 +171,10 @@
 										Consider engaging a third-party auditor to assess HIPAA compliance and provide recommendations.</li>
 									</p>
 									<h3>Assignment 1: Pampered Pets Risk Analysis</h3>
+									<p>
+										Pampered Pets seeks to investigate the risks of digitization, the following assignment provides an  analysis on the future state of the business. 
+									</p>
+									<a href="https://github.com/TarekHamzaGoda/05_Module_5_ISM_AUG23/blob/main/01_Assignment%20Part%201/A1U3_Risk_Identification_Report.pdf">source code</a>
 
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
@@ -249,7 +253,7 @@
 									<p>
 										Hot, Warm, and cold standby are approaches and strategies to disaster discovery. Each vary in levels associated with cost, Recovery Time Objective (RTO), Recovery Point Objective (RPO), and availability. The differences will be previewed in the table below. The choice between hot, warm, and cold standby strategies depends on an organization's requirements for availability, data loss tolerance.
 									</p>
-									<span class="image main"><img src="images/o11.png" alt="" /></span>
+									<span class="image main"><img src="images/ISM_DR1.png" alt="" /></span>
 									<p>
 										The technology applied plays a crucial role for creating a hot standby solution between two on-premise data centers. The choice depends on the infrastructure and network connectivity available based on the feasibility and effectiveness of the solution. Below are some factors to consider for Hot standby solutions:
 									</p>
@@ -264,11 +268,78 @@
 											Monitoring and Alerting: Comprehensive monitoring solutions can proactively detect issues in order to trigger necessary failover processes. 
 										</li>
 									</p>
-									<p><b> Activity 2: DR Definitions </b></p>
+									<p><b> Activity 2: DR Solutions Design </b></p>
+									<p>Below are several main lock-down issues provided by the suggested authors:</p>
+									<p>
+										<li>
+											Proprietary Services and APIs: Cloud provider often offer services and APIs unique to their platform. 
+										</li>
+										<li>
+											Data Transfer Costs: Transferring data out of a cloud provider’s environment can endure expensive cost, therefore organizations deter from switching to an In0house solution or a different provider. 
+										</li>
+										<li>
+											Lack of compatibility: Applications and workloads optimized for one cloud provider are not easily transferred to another provider due to difference in APIs and infrastructure. 
+										</li>
+										<li>
+											Migration Costs: The process to migrate data and services from one cloud to another is time-consuming and costly. 
+										</li>
+									</p>
+									<p>
+										Additional, below are some mitigation strategies proposed for the above issues: 
+									</p>
+									<p>
+										<li>
+											Multi cloud strategy: Hybird cloud solution to reduce dependency on provider.
+										</li>
+										<li>
+											Standardize on Open Standards: Choose technologies and APIs that adhere to open standards. This will allow the transition between other providers easier. 
+										</li>
+										<li>
+											Data Portability: Apply data portability best practices, include open data formats and migration plan in place. Regular back up data and ensures its in a format that can be easily moved. 
+										</li>
+									</p>
+									<p>
+										Moreover, some of the security concerns related to cloud solutions along with possible mitigations include the following:
+									</p>
+									<p><u>Data Breaches: Unauthorized access to data stored leading to leaks. This can be mitigated through the following suggestions:</u></p>
+									<p>
+										<li>
+											Implementing multi-factor authentication and strong access control
+										</li>
+										<li>
+											Encrypt data at rest and in transit 
+										</li>
+										<li>
+											Regular audit and monito access to sensitive data. 
+										</li>
+									</p>
+									<p><u>Identity and Access Management: Management of user access and permissions can lead to unauthorised access or privilege escalation. This can be mitigated by:</u></p>
+									<p>
+										<li>
+											Role-based access control 
+										</li>
+										<li>
+											Regular update and review user access permissions
+										</li>
+									</p>
+									<p><u>Data Loss and Availability: Cloud services outages or data loss incidents can impact business process. Mitigations:</u></p>
+									<p>
+										<li>
+											Data backup and disaster recovery plans.
+										</li>
+										<li>
+											Monitor cloud services status. 
+										</li>
+										<li>
+											Usage of multiple availability zones offered by the cloud provider. 
+										</li>
+									</p>
 
 
-									<p><b> Activity 2: DR Definitions </b></p>
-									<span class="image main"><img src="images/o11.png" alt="" /></span>
+									<p><b> Activity 3: DR Solutions Design and Review </b></p>
+									<span class="image main"><img src="images/ISM_DR2.png" alt="" /></span>
+									<span class="image main"><img src="images/ISM_DR3.png" alt="" /></span>
+									<span class="image main"><img src="images/ISM_DR4.png" alt="" /></span>
 									
 									
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>

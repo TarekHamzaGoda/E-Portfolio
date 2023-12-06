@@ -112,6 +112,7 @@ Communication breakdowns between stakeholders, team members, and management can 
 										<b>Poor Risk Management:</b>
 Failing to assess and identify potential risks at the beginning phases of the project can lead to unexpected delays. This will neglect to develop a mitigation plan that may result in risk escalations and serious issues. Moreover, ignoring external factors such as advancements in technology and changes in market needs can leave the project subject to disruptions. 
 									</li>
+									<br>
 									<p>
 										Below are examples of project failures as result of the causes mentioned above:
 									</p>
@@ -124,8 +125,7 @@ The platformed suffered from slow loading times, frequent crashes and incorrect 
 										<b>UK National Programme for IT:</b>
 An initiative to digitize the healthcare IT system in the UK. Due to the scope expanding over time and the increase of the project complexity created difficulties in managing the requirements leading to budget overrun that eventually resulted in a financial strain (Justinia, 2016). 
 									</li>	
-									<span class="image main"><img src="images/D1_UseCase.PNG" alt="" /></span>
-									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
+									<P><b><i>All references are recorded in <a href="generic_SEPM_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
 
@@ -151,66 +151,19 @@ Moreover, the Unit 2 seminar on Estimation and Risk emphasized the importance of
 									<header class="major">
 									<h2>Unit 3</h2>
 									</header>
-									<h3>Learning Outcomes: Secure Design Practices </h3>
+									<h3>Learning Outcomes: Cost Estitmation Methods </h3>
 									<p>
-										In this unit, I was keen to explore the best practices to develop a secure software and the common design patterns to achieve this. Having developed a mini software during my last OOP module, I often found myself using the decorator design pattern. As a result, the code that was produced was more structured and flexible as it reduces the subclass count and leverages the abstract component to build the applications main system features. Moreover, there are other design patterns that are considered secure and are usually called “Secure Design Patterns” (SPD). SDP does not only promote reusability but also takes into consideration software vulnerabilities. This method replicates existing design patterns and adds security-effective techniques in order to protect the system form security breaches after deployment (Dougherty & Kirk , 2009). 
+										This unit’s main take points in opinion are the cost estimation techniques and planning strategies. This serves as a vital step for constructing the foundations for the developing a project. I had the opportunity to delve deeper in understanding the different types of cost estimation methods such as COCOMO and Expert Judgment.  I would like to discuss the possibility of using these techniques in the future to asset as in building a constructive cost analysis for our system requirements during the assignments.  
 									</p>
 									<h3>Team Notes: Week 3</h3>
 									<p>
-										In our third team meeting, each member presented their research on the system requirements of the software. We have decided to work on the document outline in an attempt to organize the structure of the application and our intended workflow. I think organizing the application into several components can assist with understanding the application’s general requirements. Therefore, we have decided the application should be divided into sections that include main system requirements, proposed security measures, main databases, UML Diagrams and development tools. In this way, the application components can be split among team members for further development. 
+										In this meeting, Brad presented a summary of the workers' plan, estimating it at around £185K, while Michael and I outlined their findings on hardware configuration, estimating costs at approximately £370K. Brad then summarized the project schedule, detailing eight 6-week cycles split into design, development, and testing weeks. Haaris suggested the possibility of generating revenue through alpha versions to aid in covering project costs, addressing budget concerns. The team discussed the cost of one machine, agreed on Gherkin statements, project plan template, and methodology sections, and explored the potential for system upgradability and extensibility. They operated under the assumption that EDC doesn't expect all 2000 systems simultaneously. Michael committed to working on other system variations, myself to adding information to the document and working on the introduction, Brad to initiating the limitations section and contributing to the timeline, and Haaris to focusing on the risk plan section. 
 									</p>
-									<h3>Team activity: Discussion</h3>
-									<p><b>What factors determine whether a programming language is secure or not?</b></p>
+									<h3>E-Portfolio Activity: </h3>
 									<p>
-										There are many factors that indicate how secure a programming language is, according to (Gasiba, et al., 2020) some of these factors include:
+										Drawing from the insights presented in Dicheva & Hodge's (2018) paper on Data Structures, particularly focusing on stacks, it is evident that a multitude of online applications rely on this data structure. Social media platforms, for instance, leverage such data structures for various functions, including the storage of posts and images in the form of arrays and matrices. For instance, when users engage in activities like post editing, involving multiple actions, the system maintains a record of these changes in case the user decides to undo them. In such instances, the user can simply "pop" the latest change from the stack.
 									</p>
-									<p>
-									<li>
-										Memory management: A language with strong memory management features, such as automatic memory allocation and garbage collection, is generally considered more secure.  
-									</li>
-									<li>
-										Standard libraries: A language with strong standard libraries that provide secure and well-tested implementations of common tasks, such as cryptography, is generally considered more secure.
-									</li>
-									<li>
-										Language design: A language with a well-designed syntax and semantics that encourages secure coding practices, such as data validation and input sanitization, is generally considered more secure.
-									</li>
-									</p>
-									
-									<p><b>Could Python be classed as a secure language? Justify your answer.</b></p>
-									<p>
-										Referring to the factors above, Python has strong memory management features including automatic memory allocation and garbage collection. This makes it less prone to memory-related security vulnerabilities such as buffer overflows and memory leaks. python is a dynamically-typed language, which means that variables are not required to have a specific data type. However, Python has strong type safety features that help prevent type-related security vulnerabilities such as type confusion and pointer arithmetic errors.
-									</p>
-									<p><b>Python would be a better language to create operating systems than C. Discuss. </b></p>
-									<p>
-										While python is a high-level interpreted programming language and is mostly used for automation and data processing tasks, it is not suited for developing operating system for several reasons. 
-									</p>
-									<p>
-									<li>
-										Performance: Operating systems requires low level control and high performance which C can provide; However, python requires and interpreter which is not as efficient as native machine code.  
-									</li>
-									<li>
-										Compatibility: Most operating systems are built with large amount of code most if wish is C. Therefore, integrating new code using C is more efficient.   
-									</li>
-									<li>
-										Portability: Unlike python, operating systems built using C can be run on various hardware architectures and can be compiled to hardware code. 
-									</li>
-									</p>
-									<h3>Discussion 1: Summery post</h3>
-									<p>
-										First, I would like to thank the participants on commenting on my initial discussion. Few valuable points are added and I would like to including them in the below summery post. Second, as pointed out, I have used an incorrect UML chart to describe an SQL injection instance in a login model. Instead, the same instance will be restructured in an activity diagram and will Be illustrated below. 
-									</p>
-									<span class="image main"><img src="images/SP.png" alt="" /></span>
-
-									<p>
-										<b>Figure 1 </b> resembles a simple structure of a web application’s flow of information. An attacker can identify vulnerable input fields and attempt accessing the database. Once the attacker discovers the data types and version, the data can be extracted and exploited (Fouad & Elshazly, 2013). There are many causes of SQL injections ranging from outdated code, Security assumptions and failure to secure user input. As a result, the web application is left exposed for exploitation. 
-									</p>
-									<p>
-										<b>Figure 2</b> previews the same instance in which the user input flows through the web client up until the web server or database. Only this time a policy-based Proxy Agent is added to prevent SQL injection attacks and Cross site scripting (XSS). This is a method proposed by (Choudhary, 2012) that classifies the input request as a query-based request, detects the type of attack if any and alerts the system. This method can be achieved with Regular Expressions, Pattern Recognition and Sanitization.
-									</p>
-									<p>
-										As an extension to Elsie’s suggestion, another prevention technique against injections and XSS and as proposed by the OWASP is output encoding. This method renders a user input into an equivalent form that is unhostile.  This is usually applied in the application’s interface before the information is passed to the database. This will prevent the interference of untrusted data with the server database of even the HTML (Hurbism, 2010).
-									</p>
-									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
+									<P><b><i>All references are recorded in <a href="generic_SEPM_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
 

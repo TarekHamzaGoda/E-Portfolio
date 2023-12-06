@@ -153,7 +153,7 @@ Moreover, the Unit 2 seminar on Estimation and Risk emphasized the importance of
 									</header>
 									<h3>Learning Outcomes: Cost Estitmation Methods </h3>
 									<p>
-										This unit’s main take points in opinion are the cost estimation techniques and planning strategies. This serves as a vital step for constructing the foundations for the developing a project. I had the opportunity to delve deeper in understanding the different types of cost estimation methods such as COCOMO and Expert Judgment.  I would like to discuss the possibility of using these techniques in the future to asset as in building a constructive cost analysis for our system requirements during the assignments.  
+										This unit’s main take points in my opinion are the cost estimation techniques and planning strategies. This serves as a vital step for constructing the foundations for the developing a project. I had the opportunity to delve deeper in understanding the different types of cost estimation methods such as COCOMO and Expert Judgment.  I would like to discuss the possibility of using these techniques in the future to asset as in building a constructive cost analysis for our system requirements during the assignments.  
 									</p>
 									<h3>Team Notes: Week 3</h3>
 									<p>
@@ -163,6 +163,7 @@ Moreover, the Unit 2 seminar on Estimation and Risk emphasized the importance of
 									<p>
 										Drawing from the insights presented in Dicheva & Hodge's (2018) paper on Data Structures, particularly focusing on stacks, it is evident that a multitude of online applications rely on this data structure. Social media platforms, for instance, leverage such data structures for various functions, including the storage of posts and images in the form of arrays and matrices. For instance, when users engage in activities like post editing, involving multiple actions, the system maintains a record of these changes in case the user decides to undo them. In such instances, the user can simply "pop" the latest change from the stack.
 									</p>
+									<h3>Summery Post: </h3>
 									<P><b><i>All references are recorded in <a href="generic_SEPM_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
@@ -172,70 +173,18 @@ Moreover, the Unit 2 seminar on Estimation and Risk emphasized the importance of
 									<header class="major">
 									<h2>Unit 4</h2>
 									</header>
-									<h3>Learning Outcomes: Regular Expressions</h3>
+									<h3>Learning Outcomes: Risk Frameworks, Testing, and Cost estimation</h3>
 									<p>
-										In unit 4, I was keen to understand the usage of regular expressions (Regex) and how it is a powerful tool that is used in text processing and identifying patterns. Regex can be particularly useful in providing a secure approach for validating input that can be greatly beneficial to our application implementation phase. On the other hand, I have learned that “evil regex” is referred overly complex regex patterns that can have unintended consequences such as the increase of the process time due to excessive backtracking. We are planning to use regex in our sign-up pages and building a pattern for each input category such as the email and submission ID. 
+										During this unit, I had the chance to learn more about risk frameworks, test driven development and cost estimation methods. In particular, I was mostly drawn to test driven development process presented in seminar two that illustrated the development of test cases even before writing the main code. I am planning to utilize these phases of testing that includes Unit tests and integration tests in the future deliverables of the cost calculation application. 
 									</p>
 									<h3>Team Notes: Week 4</h3>
 									<p>
-										Now that we are closer to the deadline, we have decided to setup a session to review each other’s system components and research materials. We also conducted few debates concerning the secure software features and GDPR clauses to be used. Meanwhile, we had to test several modules such as the login and signup features to help us understand and construct our UML diagrams. 
+										In this week’s meeting, we focused on the progress and cost analysis of their project. They discussed Michael's work on creating a cost-effective system for public sale, deliberating on pricing strategies and potential profitability. The team debated unit prices, manufacturing costs, and the financial feasibility of producing a certain device, exploring various options for selling the machines to the public. They also considered system simplification, budget reviews, and risk management strategies. 
 									</p>
-									<h3>Portfolio Component: Regex</h3>
-									<p><b>
-										What is ReDOS and what part do ‘Evil Regex’ play?
-									</b></p>
+									<h3>E-Portfolio Activity: </h3>
 									<p>
-										ReDoS stands for "Regular Expression Denial of Service," which refers to a type of cyber-attack that exploits the vulnerability of certain regular expressions to cause a denial of service (DoS) condition in the target application. Regular expressions are patterns used to match and manipulate strings, and they are commonly used in programming.
+										Drawing from the insights presented in Dicheva & Hodge's (2018) paper on Data Structures, particularly focusing on stacks, it is evident that a multitude of online applications rely on this data structure. Social media platforms, for instance, leverage such data structures for various functions, including the storage of posts and images in the form of arrays and matrices. For instance, when users engage in activities like post editing, involving multiple actions, the system maintains a record of these changes in case the user decides to undo them. In such instances, the user can simply "pop" the latest change from the stack.
 									</p>
-									<p>
-										"Evil Regex" is a term used to describe malicious or intentionally crafted regular expressions that are designed to trigger the ReDoS vulnerability in regex engines. These malicious regular expressions are carefully crafted with certain patterns or combinations of characters that exploit the way the regex engine processes input, causing it to exhibit poor performance and take an excessive amount of time to complete the matching process.
-									</p>
-									<p><b>
-										What are the common problems associated with the use of regex? How can these be mitigated?
-									</b></p>
-									<p>
-										Performance and Efficiency: Some regex patterns can be inefficient and result in poor performance, especially when dealing with large input data or complex patterns. s, it's important to use optimized and efficient regex patterns. Avoid using overly complex or redundant patterns, and consider techniques such as pattern simplification, character class optimization, and quantifier optimization to optimize regex performance.
-									</p>
-									<p>
-										Security Risks: Regular expressions can potentially introduce security risks, such as ReDoS attacks, as mentioned in the previous answer. Malicious or poorly crafted regex patterns can be exploited to cause denial of service, information disclosure, or other security vulnerabilities in the target application. To mitigate security risks associated with regex, it's important to validate and sanitize any input that is used in regex patterns, and carefully review and test regex patterns for potential vulnerabilities, such as ReDoS.
-									</p>
-									<P><b>
-										How and why could regex be used as part of a security solution?
-									</b></P>
-									<p>
-										Input Validation: Regex can be used to validate and sanitize input data to ensure that it meets the expected format or pattern, which can help prevent injection attacks, such as SQL injection, cross-site scripting (XSS), or other types of code injection attacks.
-									</p>
-									<h3>Artefacts: UK postcode, Regex</h3>
-									<p>
-										UK post codes consists of two parts, an “outcode” and an “incode”. Each consists of two – four characters followed by a space, then another three characters. A regex pattern can be extracted from a post code if we comply with a basic rule. An outcode consists of 1-2 letters followed by a character that is aways numeric, followed by and optional letter or number. Example (AA1A / A1A/ AA11 etc). An incode is separated by a single or multiple space, followed by a numeric character, followed by 2 letters. This regex pattern also limits the length of the input to match the UK post code format, thus protecting for ReDos. Check the code below. 
-									</p>
-									<pre><code>
-import re
-
-
-def validate_uk_postcode(user_input):
-	"""A function to validate user post codes inputs using regex match function"""
-
-	return bool(re.match(r"^(((([A-Z][A-Z]{0,1})[0-9][A-Z0-9]{0,1}) {0,}[0-9])[A-Z]{2})$", user_input))
-
-
-test_codes = ["M1 1AA", "M60 1NW", "CR2 6XH", "DN55 1PT", "W1A 1HQ", "EC1A 1BB", "12312asda"]
-
-
-for user_input in test_codes:
-	print(validate_uk_postcode(user_input))
-									</code></pre>
-									<h3>Results</h3>
-									<pre><code>
-	True
-	True
-	True
-	True
-	True
-	True
-	False
-
-									</code></pre>
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
@@ -245,70 +194,38 @@ for user_input in test_codes:
 									<header class="major">
 									<h2>Unit 5</h2>
 									</header>
-									<h3>Learning Outcomes: Testing </h3>
+									<h3>Learning Outcomes: User Experiance </h3>
 									<p>
-										This unit explores the various testing modules offered by python such as pylint, unitest and flack8. I think this unit provides a clear approach on the testing strategies, especially during the codio exercise. I have learned how to import the testing scripts to my main file and incorporate testing models for each of my code block that presents different system features. 		
+										This unit cantered on establishing the groundwork for user experience, emphasizing the critical role of aligning with market expectations in the initial project stages for achieving a high-quality user experience. It introduced various UX metrics and methodologies, including Persona building, Journey mapping, and Polaristic Walkthrough. Additionally, the unit's lecture case shed light on yet another aspect of software project management which are the responsibilities of a project manager. After gaining insights into the stages a project manager navigates, such as project planning, governance, and communication plans, provides valuable knowledge that can aid me in effectively organizing project requirements.
 									</p>
 									<h3>Team Notes: Week 5</h3>
 									<p>
-										During this meeting, the following work in progress topics were discussed:
+										In this week’s meeting, the team extensively reviewed and adjusted their project report, personnel allocation, and machine production plans. Discussions included considerations for project scheduling, risk plans, and adjustments in project planning to ensure they stay within budget. The meeting concluded with the identification of next steps, including the review of Michael's document, the creation of a detailed delivery plan by Tarek, and the finalization of cost calculations by Brad. The team emphasized the need for accurate cost assessments and agreed to continue refining their work to meet project deadlines.
+									</P>
+									<h3>Unit 5 Discussion: </h3>
+									<p>
+										Figure 1 in Minge & Thuring (2018) paper illustrates a CUE model that indicates the emotional reactions based on user perception of a system. In particular, the CUE model seems to highlight the initial user interactions by mainly capturing it’s influence by the usability and visual aesthetics. However, the full adaptation of this model might be redundant considering that this approach might not contribute to long term user satisfaction and loyalty. 
 									</p>
 									<P>
+										A UX framework that takes into account the evolving nature of user experiences over time might be crucial for creating a user-centric product. According to (Karapanos, et al., 2011), few strategies can be implemented that can incorporate the dynamics of user emotions into a UX framework:
+									</P>
+									<P>
 										<li>
-											Framework to build the web application. We debated wither Django, Flask or Bottle is the best framework to integrate system features and the SQL database. We also researched tutorial to help us build the syntax in order to lunch the application.
+											<b>User Research:</b>Conducting comprehensive research to understand the target audience, hence mapping the emotional response through different stages of the interaction with the product. This includes finding information on the user’s motivations and expectations when interacting with the system.
 										</li>
 										<li>
-											Secure Software development. We tried to source external libraries that can assist us in building the OTP and encryption features.
+											<b>User Journey:</b>Development of detailed user journey maps that illustrates the emotional states users will encounter during their first use and those that become more experienced.
 										</li>
 										<li>
-											SQL database management tools. Tested out few tables on SQLite, MySQL and SQL server. 
+											<b>User onboarding:</b>Ensuring that the user’s expectations are managed and that the user is guided through the features of the system at the first glance. In addition, ensuring that the interface is user-friendly to avoid potential frustration and confusion.
+										</li>
+										<li>
+											<b>Personalization:</b>Personalized features tailored based individual preferences ensure controlled emotional response.
 										</li>
 									</P>
-									<p>
-										The above points assisted us with identifying the required tools to build our application. That is because our design proposal will cover the processes and frameworks needed to execute the web app. 
-									</p>
-									<h3>Portfolio Component: Cyclomatic Complexity</h3>
-									<p>
-										Cyclomatic Complexity in my opinion is still reelevated when it comes to developing a secure software. Cyclomatic Complexity is a quantitative measure of the complexity of a software program's control flow, and it can be used as an indicator of the potential risk and maintainability of the code. Higher CC values can indicate the likelihood od in introducing security vulnerabilities. Although CC is just one of many factors to consider in developing a secure software, it provides an overall matric of the level complexity of the code in which few initiatives can be taken to refactor the code and the value of test cases. 
-									</p>
-									<h3>Artefacts: Testing</h3>
-									<p>
-										The unit test module in python is imported to conduct a test case on our previous regex syntax that validates the UK post codes. In the previous code, the built-in test in a from of a “for loop” was added to validate the user input. For the unit test to succeed, the built-in tester will be removed. A class will be created to test the validation function in the post code checker file. Several assert functions will evaluate if the post code is True. See the code below: 
-									</p>
-									<pre><code>
-import unittest
-import Unit4_Regex
-
-
-class PostCodeTester(unittest.TestCase):
-
-	def test_Unit4_Regex(self):
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("M1 1AA"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("M60 1NW"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("CR2 6XH"), True)
-		self.assertEqual(Unit4_Regex.validate_uk_postcode("23123123s"), True)
-
-
-if __name__ == '__main__':
-	unittest.main()
-									</code></pre>
-									<P><b>
-										Results 
-									</b></P>
-									<pre><code>
-Ran 1 test in 0.018s
-
-FAILED (failures=1)
-Launching unittests with arguments python -m unittest test_postcodes.PostCodeTester.test_Unit4_Regex in F:\01_Documents\01_My_Academics\03_Essex University\03_04_NISM_SSD\04_Eportfolio\Codes
-
-
-
-True != False
-
-Expected :False
-Actual   :True
-
-									</code></pre>
+									<P>
+										By integrating these strategies into the UX framework, you can create a more adaptable and user-centered design that accommodates the changing emotional landscape of users from their initial interaction to becoming more experienced with the product.
+									
 									<P><b><i>All references are recorded in <a href="generic_SSD_u12.html">unit 12</a>. </i></b></P>
 									<hr />
 
@@ -330,17 +247,7 @@ Actual   :True
 									<p>
 										The following code in stylelint.py file contained few errors that prevented it from running properly. In the view version, Indentation was added along with a print statement in order for the code be executed properly. 
 									</p>
-									<pre><code>
-
-
-
-def factorial(n):
-""" Return factorial of n """
-if n == 0:
-return 1
-else:
-return n*factorial(n-1)
-									</code></pre>
+										
 									<p>
 										After running the flake8 module on the original code, the missing indentation error was returned in which the white spaces was viewed. In this case all the errors are viewed and amended. 
 									</p>
